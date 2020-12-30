@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCI - Renewal</title>
+    <title>DCI - Upgrade</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,7 +27,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-         <!-- Sidebar -->
+        <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon">
                     <i><img src="img/icon%20white.png"> </i>
                 </div>
-                <div class="sidebar-brand-text mx-3">User <sup>Dashboard</sup></div>
+                <div class="sidebar-brand-text mx-3">Super Admin <sup>Dashboard</sup></div>
             </a>
 
             <!-- Divider -->
@@ -43,58 +43,72 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">
+                <a class="nav-link collapsed active" href="sup-admin-dashboard.html" >
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span> Dashboard</span></a>
-            </li>
+                    <span>Dashboard</span>
+                </a>
+            </li>            
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="Account.html" >
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="admin-account.html" >
                     <i class="fas fa-fw fa-user"></i>
                     <span>Account</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            
-            
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-list"></i>
-                    <span>Forms</span>
+                    <i class="fas fa-fw fa-check-circle"></i>
+                    <span>Verification</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="renew.html">Renew</a>
-                        <a class="collapse-item" href="upgrade.html">Upgrade</a>
-                        <a class="collapse-item" href="downgrade.html">Downgrade</a>
-                        <a class="collapse-item" href="terminate.html">Terminate</a>
+                        <h6 class="collapse-header">Veriifcation</h6>
+                         <a class="collapse-item" href="sup-investment.html">Investment</a>
+                        <a class="collapse-item" href="sup-admin-verification-loan.html">Loans</a>
+                        <a class="collapse-item" href="sup-admin-dashboard-saving.html">Savings</a>
                     </div>
                 </div>
             </li>
-
-            
-             <!-- Nav Item - Pages Collapse Menu -->
-             <li class="nav-item">
-                <a class="nav-link collapsed" href="notification.html" >
-                    <i class="fas fa-fw fa-bell"></i>
-                    <span>Notification</span>
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#users"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Users</span>
                 </a>
+                <div id="users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Various forms</h6>
+                         <a class="collapse-item" href="sup-admin-customers.html">Customers</a>
+                        <a class="collapse-item" href="sup-admin-staffs.html">Staffs</a>
+                    </div>
+                </div>
             </li>
-
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-credit-card"></i>
+                    <span>Ecomerce</span>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Various forms</h6>
+                         <a class="collapse-item" href="admin-payment-investment.html">Manage Products</a>
+                        <a class="collapse-item" href="admin-payment-loans.html">Orders</a>
+                        <a class="collapse-item" href="#">Sales Ranking</a>
+                    </div>
+                </div>
+            </li>
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -225,47 +239,83 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Renewal Area</h1>
-
-                </div>
-                <!-- /.container-fluid -->
-
+                    <h1 class="h3 mb-4 text-gray-800">Staffs</h1>
                 
                 
-                
-                
-
-                        <div class="col-lg-12">
-
+                <div class="col-lg-12">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>You invested <code>1,000,000</code> 
-                                        <br>For <code>Biannual Monthly Investment</code> 
-                                        <br> Package active till <code>05/03/2021</code> 
-                                        <br>Proceed with package renewal below, make sure to read the terms of downgrade.</p>
-                                    <br>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-flag"></i>
-                                        </span>
-                                        <span class="text">Renew Now</span>
-                                    </a>
+                                <div class="card-header pt-6">
+                                    <h5 class="card-title text-weight-bold text-800"></h5>
+                                  </div>
+                                <div class="card-body p-4">
+                                    <div class="table-responsive" width="100%">
+                                        <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Staff Name</th>
+                                                    <th>Transation Type</th>
+                                                    <th class="">Action Taken</th>
+                                                    <th class="text-center">Date</th>
+                                                    <th>User Email</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="">
+                                                    <td>1</td>
+                                                    <td>George Obe
+                                                        <a href="#" class="text-link text-secondary pl-1" title="More" data-toggle="modal" data-target="#investmentModal">
+                                                            <i class="fas fa-fw fa-info-circle"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td>Savings</td>
+                                                    <td class="text-danger">Declined</td>
+                                                    <td class="text-center">12/02/2020</td>
+                                                    <td>christtom@gmail.com</td>
+                                                </tr>
+                                                <tr class="">
+                                                    <td>2</td>
+                                                    <td>Chima Kalu
+                                                        <a href="#" class="text-link text-secondary pl-1" title="More" data-toggle="modal" data-target="#investmentModal">
+                                                            <i class="fas fa-fw fa-info-circle"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td>Loan</td>
+                                                    <td class="text-success">Approved</td>
+                                                    <td class="text-center">02/02/2020</td>
+                                                    <td>donnychi@yahoo.com</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                    
+                                    <div class="buttons">
+                                        <a href="#" class="btn btn-primary btn-icon-split back">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-left"></i>
+                                        </span>
+                                        <span class="text">Back</span>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#upgradeModal">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Next</span>
+                                    </a>
+                                    </div>
+                                    
+                                    
                                 </div>
                             </div>
 
                         </div>
+                
+                    
+                    
 
+                </div>
+                <!-- /.container-fluid -->
 
-                
-                
-                
-                
-                
-                
             </div>
             <!-- End of Main Content -->
 
@@ -273,7 +323,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by Techpadi</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -310,7 +360,64 @@
         </div>
     </div>
 
-     <!-- Bootstrap core JavaScript-->
+    <!-- Completing Process Modal -->
+    <div class="modal fade" id="investmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Staff Name</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="table-responsive" width="100%">
+                            <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                <thead>
+                                    <tr class="font-weight-bold">
+                                        <th>S/N</th>
+                                        <th>Customer Name</th>
+                                        <th>Transation Type</th>
+                                        <th class="">Status</th>
+                                        <th class="text-center">Date</th>
+                                        <th>Referred/Sponsor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td>1</td>
+                                        <td>George Obe</td>
+                                        <td>Investment</td>
+                                        <td class="">Pending</td>
+                                        <td class="text-center">12/02/2020</td>
+                                        <td>Chris Tonny</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>2</td>
+                                        <td>Chima tunde</td>
+                                        <td>Loan</td>
+                                        <td class="text-success">Approved</td>
+                                        <td class="text-center">02/02/2020</td>
+                                        <td>Chris Tonny</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                              </div>
+                          </div>
+                    <div class="modal-footer">
+                    <a class="btn btn-primary" href="#">Continue</a>
+                </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
      <script src="vendor/jquery/jquery.min.js"></script>
      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
@@ -320,6 +427,7 @@
      <!-- Custom scripts for all pages-->
      <script src="js/admin.js"></script>
      <script src="js/main.js"></script>
+
 
 </body>
 

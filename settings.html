@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCI - Verification</title>
+    <title>DCI - Upgrade</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon">
                     <i><img src="img/icon%20white.png"> </i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin <sup>Dashboard</sup></div>
+                <div class="sidebar-brand-text mx-3">User <sup>Dashboard</sup></div>
             </a>
 
             <!-- Divider -->
@@ -44,21 +44,30 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="admin-dashboard.html" >
-                    <i class="fas fa-fw fa-user"></i>
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>            
 
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Options
+            </div>
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="admin-account.html" >
+                <a class="nav-link collapsed" href="Account.html" >
                     <i class="fas fa-fw fa-user"></i>
                     <span>Account</span>
                 </a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-check-circle"></i>
@@ -66,6 +75,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Veriifcation</h6>
                          <a class="collapse-item" href="investment.html">Investment</a>
                         <a class="collapse-item" href="admin-verification-loan.html">Loans</a>
                         <a class="collapse-item" href="admin-dashboard-saving.html">Savings</a>
@@ -80,12 +90,31 @@
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="admin-payment-investment.html   ">Investment</a>
+                        <h6 class="collapse-header">Various forms</h6>
+                         <a class="collapse-item" href="admin-payment-investment.html">Investment</a>
                         <a class="collapse-item" href="admin-payment-loans.html">Loans</a>
                         <a class="collapse-item" href="#">Referrals</a>
                     </div>
                 </div>
             </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            
+             <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="settings.html" >
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            
+
             <!-- Nav Item - Pages Collapse Menu -->
            
 
@@ -194,7 +223,6 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -228,32 +256,37 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Verification</h1>
-                
-                
                 <div class="col-lg-12">
-                            <div class="card shadow mb-4">
-                                <div class="card-header pt-6">
-                                    <h5 class="card-title text-weight-bold text-800">Investment</h5>
-                                  </div>
                                 <div class="card-body p-4">
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">All</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="pills-pending-tab" data-toggle="pill" href="#pills-pending" role="tab" aria-controls="pills-profile" aria-selected="false">Pending</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" id="pills-approved-tab" data-toggle="pill" href="#pills-approved" role="tab" aria-controls="pills-contact" aria-selected="false">Approved</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="pills-declined-tab" data-toggle="pill" href="#pills-declined" role="tab" aria-controls="pills-contact" aria-selected="false">Declined</a>
-                                      </li>
+                                        <li class="nav-item m-2 shadow-sm bg-white w-25 rounded">
+                                        <a class="nav-link active text-center tab1 p-3" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">
+                                            <h2 class="text-xl">
+                                                <i class="fas fa-user"></i>
+                                            </h2>
+                                            <h5>ACCOUNT</h5>
+                                        </a>
+                                        </li>
+                                        <li class="nav-item m-2 shadow-sm bg-white w-25 rounded">
+                                            <a class="nav-link text-center tab1 p-3" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">
+                                                <h2 class="text-xl">
+                                                    <i class="fas fa-users "></i>
+                                                </h2>
+                                                <h5>USERS</h5>
+                                            </a>
+                                            </li>
+                                        <li class="nav-item m-2 shadow-sm bg-white w-25 rounded">
+                                            <a class="nav-link text-center tab1 p-3" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">
+                                                <h2 class="text-xl">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </h2>
+                                                <h5>ABOUT</h5>
+                                            </a>
+                                            </li>
                                   </ul>
                                   <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="card shadow m-2 p-3">
+                                        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-home-tab">
                                         <div class="table-responsive" width="100%">
                                             <table class="table table-hover show" id="dataTable" cellspacing="0">
                                                 <thead>
@@ -315,6 +348,8 @@
                                             </table>
                                         </div>
                                     </div>
+                                    </div>
+                                    
                                     <div class="tab-pane fade" id="pills-pending" role="tabpanel" aria-labelledby="pills-profile-tab">
                                         <div class="table-responsive" width="100%">
                                             <table class="table table-hover show" id="dataTable" cellspacing="0">
@@ -417,57 +452,6 @@
                                             </table>
                                         </div> 
                                     </div>
-                                    <div class="tab-pane fade" id="pills-declined" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                        <div class="table-responsive" width="100%">
-                                            <table class="table table-hover show" id="dataTable" cellspacing="0">
-                                                <thead>
-                                                    <tr class="font-weight-bold">
-                                                        <th>S/N</th>
-                                                        <th>Name</th>
-                                                        <th>Plan</th>
-                                                        <th class="text-right">Amount</th>
-                                                        <th>Reg No</th>
-                                                        <th class="text-center">Status</th>
-                                                        <th class="text-center">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>1</td>
-                                                        <td>George Obe</td>
-                                                        <td>Silver</td>
-                                                        <td class="text-right">40,000</td>
-                                                        <td>211</td>
-                                                        <td class="text-center text-danger">Declined</td>
-                                                        <td class="text-center">
-                                                            <a href="http://" class="text-link text-danger" title="Decline">
-                                                                <i class="fas fa-fw fa-times"></i>
-                                                            </a>
-                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
-                                                                <i class="fas fa-fw fa-check"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="">
-                                                        <td>2</td>
-                                                        <td>Matthew Wike</td>
-                                                        <td>Gold</td>
-                                                        <td class="text-right">2,000,000</td>
-                                                        <td>291</td>
-                                                        <td class="text-center text-danger">Declined</td>
-                                                        <td class="text-center">
-                                                            <a href="http://" class="text-link text-danger" title="Decline">
-                                                                <i class="fas fa-fw fa-times"></i>
-                                                            </a>
-                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
-                                                                <i class="fas fa-fw fa-check"></i>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div> 
-                                    </div>
                                   </div>
                                    
                                     <div class="buttons">
@@ -487,7 +471,6 @@
                                     
                                     
                                 </div>
-                            </div>
 
                         </div>
                 
@@ -504,7 +487,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by Techpadi</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -596,7 +579,7 @@
                             </div>
                             <div class="card mt-1">
                               <div class="card-header">
-                                <h6 class="card-title">Investment Details</h6>
+                                <h6 class="card-title">Loan Details</h6>
                               </div>
                               <div class="card-body">
                                 <ul class="list-unstyled team-members">
@@ -605,9 +588,9 @@
                                             <li>
                                                 <div class="row mb-2">
                                                   <div class="col-12 font-weight-bold text-800">
-                                                    Package:
+                                                    Loan Type:
                                                     <br />
-                                                    <span class="text-muted"><small>Silver</small></span>
+                                                    <span class="text-muted"><small>One (1) month 20% interest</small></span>
                                                   </div>
                                                  
                                                 </div>
@@ -625,24 +608,13 @@
                                                 </div>
                                               </li>
                                         </div>
-                                    </div>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="card mt-1">
-                                <div class="card-header">
-                                  <h6 class="card-title">Proof Of Payment</h6>
-                                </div>
-                                <div class="card-body">
-                                  <ul class="list-unstyled team-members">
-                                    <div class="row">
                                         <div class="col-md-6">
                                             <li>
                                                 <div class="row mb-2">
-                                                  <div class="col-12 font-weight-bold text-800">
-                                                    Payment Method:
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Employee's Name:
                                                     <br />
-                                                    <span class="text-muted"><small>Bank Transfer/Deposit</small></span>
+                                                    <span class="text-muted"><small>Beauty fred</small></span>
                                                   </div>
                                                  
                                                 </div>
@@ -652,7 +624,78 @@
                                             <li>
                                                 <div class="row mb-2">
                                                   <div class="col-md-7 font-weight-bold text-800 col-7">
-                                                    Payment Upload:
+                                                    Annual Income:
+                                                    <br />
+                                                    <span class="text-muted"><small>1,000,000</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="card mt-1">
+                                <div class="card-header">
+                                  <h6 class="card-title">Collateral Details</h6>
+                                </div>
+                                <div class="card-body">
+                                  <ul class="list-unstyled team-members">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-12 font-weight-bold text-800">
+                                                    Collateral Type:
+                                                    <br />
+                                                    <span class="text-muted"><small>Cars</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Collateral Worth:
+                                                    <br />
+                                                    <span class="text-muted"><small>4,000,000</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Ownership State:
+                                                    <br />
+                                                    <span class="text-muted"><small>Owner</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Collateral Location:
+                                                    <br />
+                                                    <span class="text-muted"><small>Rivers State</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Documents:
                                                     <br />
                                                     <span class="text-muted"><img src="" width="100%" alt="" srcset=""></span>
                                                   </div>
@@ -661,7 +704,6 @@
                                                 </div>
                                                 </div>
                                               </li>
-                                        </div>
                                         </div>
                                     </div>
                                   </ul>
@@ -679,15 +721,15 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-     <script src="vendor/jquery/jquery.min.js"></script>
-     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- 
-     <!-- Core plugin JavaScript-->
-     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
- 
-     <!-- Custom scripts for all pages-->
-     <script src="js/admin.js"></script>
-     <script src="js/main.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/main.js"></script>
 
 
 </body>

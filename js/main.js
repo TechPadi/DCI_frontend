@@ -58,10 +58,12 @@ loans.forEach((curr, index, arr) => {
     const package = Array.from(document.querySelectorAll('.package'));
     const table1 = Array.from(document.querySelectorAll('.table'));
     
-    package.forEach((curr,index) => {
+    package.forEach((curr,index,all) => {
         let buttons = document.querySelector('.buttons');
+        
 
         curr.querySelector('.nav-link').addEventListener('click', () => {
+            
             curr.parentElement.parentElement.classList.toggle('user')
             table1[index].classList.toggle('show');
             buttons.classList.toggle('show');
@@ -74,6 +76,31 @@ loans.forEach((curr, index, arr) => {
                 buttons.classList.toggle('show');
     
             }
+        });
+
+        table1.forEach((curr, index, all) => {
+            let tableRow = Array.from(curr.querySelectorAll('tr'));
+
+            tableRow.forEach((curr,index,arr) => {
+                let checktable = tableRow.every(a => {
+                    a.classList = '';
+                })
+                
+                curr.addEventListener('click', () => {
+
+                        for(let i = 0; i < arr.length; i++) {
+                            if(curr.classList === ''){
+                                curr. classList.toggle('bg-primary');
+                                continue
+                            } else {
+                               arr[i].classList = '' ;
+                            }
+                            
+                        }
+
+                   
+                })
+            })
         })
     })
 }

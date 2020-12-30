@@ -11301,3 +11301,6 @@ form.user .verification .form-control-user {
   border-radius: 5rem;
   padding: 1.5rem 1rem;
 }
+.tab1 h2 {
+  font-size: 2rem;
+}
