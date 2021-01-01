@@ -32,10 +32,10 @@
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                     <div class="col-lg-7">
-                        <div class="p-5">
+                        <div class="pl-md-5 pr-md-5 pl-3 pr-3  pt-5 pb-5">
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
-                                <div class="progressCircle">
+                                <div class="progressCircle d-flex justify-content-center mb-4">
                                     <div class="circle done2">
                                         <i class="fas fa-fw fa-circle"></i>
                                     </div>
@@ -50,65 +50,61 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="user show">
+                            <form class="user show" id="regForm">
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="email" class="form-control form-control-user" id="rEmail"
-                                            placeholder="Email">
+                                        <input type="email" class="form-control form-control-user" required id="rEmail" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" class="form-control form-control-user" required
                                             id="rPwd" placeholder="Password">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
+                                        <input type="password" class="form-control form-control-user" required
                                             id="exampleRepeatPassword" placeholder="Confrim Password">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control form-control-user" id="exampleFormControlSelect1">
+                                    <select class="form-control form-control-user" required id="rRefer">
                                         <option>--Select Medium--</option>
-                                        <option>Facebook</option>
-                                        <option>Instagram</option>
-                                        <option>Twitter</option>
-                                        <option>Google</option>
-                                        <option>A Friend</option>
+                                        <option value="facebook">Facebook</option>
+                                        <option value="instagram">Instagram</option>
+                                        <option value="twitter">Twitter</option>
+                                        <option value="google">Google</option>
+                                        <option value="friend">A Friend</option>
                                       </select>
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Next" >
+                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Next">
                             </form>
-                            <form class="user">
+                            <form class="user" id="personalForm">
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="fName"
+                                            placeholder="Full Name">
                                     </div>
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleLasttName"
+                                    <!-- <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="lName"
                                             placeholder="Last Name">
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Phone Number">
+                                        <input type="number" class="form-control form-control-user"
+                                            id="pNumber" placeholder="Phone Number">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleOccupation"
+                                        <input type="text" class="form-control form-control-user" id="occupation"
                                             placeholder="Occupation">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <div class="col-sm-6 ml-3">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Male</label><br>
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                        <label class="form-check-label" for="inlineRadio1">Female</label>
-                                        </div>
-                                    </div>
+                                    <select class="form-control form-control-user" required id="gender">
+                                        <option label="default">--Select Gender--</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                      </select>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 ml-3">
@@ -118,20 +114,11 @@
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="Next" >
                             </form>
-                            <form class="user">
+                            <form class="user" id="verifyForm">
                                 <p class="mb-4 text-center">Please input verification code sent to your email</p>
                                 <div class="form-group row verification">
-                                    <div class="col-3 mb-3 mb-sm-0">
-                                        <input type="number" class="form-control form-control-user text-center" min="1">
-                                    </div>
-                                    <div class="col-3 mb-3 mb-sm-0">
-                                        <input type="number" class="form-control form-control-user text-center" min="1">
-                                    </div>
-                                    <div class="col-3 mb-3 mb-sm-0">
-                                        <input type="number" class="form-control form-control-user text-center" min="1">
-                                    </div>
-                                    <div class="col-3 mb-3 mb-sm-0">
-                                        <input type="number" class="form-control form-control-user text-center" min="1">
+                                    <div class="col-12 mb-3 mb-sm-0">
+                                        <input type="number" class="form-control form-control-user text-center" id="verInput">
                                     </div>
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="Next" >

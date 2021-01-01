@@ -1,21 +1,21 @@
-const regForms = Array.from(document.querySelectorAll('.user')) ;
-const progressCircle = Array.from(document.querySelectorAll('.circle'));
+
+
 const progressCircle2 = Array.from(document.querySelectorAll('.progress'));
 
 console.log('Hellow');
 
-regForms.forEach((curr, index) => {
+// regForms.forEach((curr, index) => {
 
-    curr.addEventListener('submit', (e) => {
-        e.preventDefault();
-        curr.classList.toggle('show');
-        curr.nextElementSibling.classList.toggle('show');
+//     curr.addEventListener('submit', (e) => {
+//         e.preventDefault();
+//         curr.classList.toggle('show');
+//         curr.nextElementSibling.classList.toggle('show');
         
-        progressCircle[index + 1].classList = 'circle done2';
+//         progressCircle[index + 1].classList = 'circle done2';
 
-    })
+//     })
     
-});
+// });
 
 let loans = Array.from(document.querySelectorAll('.loans'));
 
