@@ -13,6 +13,7 @@ axios.defaults.baseURL = "https://dcibackend.herokuapp.com/";
 const regForm = _("#regForm");
 const personalForm = _("#personalForm");
 const verifyForm = _("#verifyForm");
+const verifydForm = _("#verifydForm");
 const progressCircle = Array.from(document.querySelectorAll('.circle'));
 
 
@@ -28,28 +29,37 @@ if (regForm) {
         
         console.log(email, password, messageofknow);
 
-        axios.post('api/v1/user/register', {
+        axios.all([
+
+          axios.post('api/v1/user/register', {
             email: email,
             password: password,
             messageofknow:messageofknow
+            }),
+          axios.post('api/v1/user/verify', {
+            email: email
             })
-            .then ( response => {
 
-            console.log(response);
+        ])
+        .then(axios.spread((resp1, resp2) => {
 
-            const id = response.data.user._id;
-            localStorage.setItem('userid', id);
-            console.log(id);
+          console.log(resp1);
 
-            regForm.classList.remove('show');
+          const id = resp1.data.user._id;
+          localStorage.setItem('userid', id);
+          console.log(id);
+
+          regForm.classList.remove('show');
             
-            personalForm.classList.add('show');
+          personalForm.classList.add('show');
             
-            progressCircle[0].classList.add('done2');
-            })
-            .catch ( error => {
-            console.log(error);
-            });
+          progressCircle[0].classList.add('done2');
+
+        }))
+        .catch ( error => {
+          console.log(error);
+        });
+        
 
     });
     
@@ -93,29 +103,27 @@ if (personalForm) {
 }
 
 // verify info api call
-if (verifyForm) {
 
-    verifyForm.addEventListener('submit', e => {
-        e.preventDefault();
+// document.addEventListener('load', ()=> {
 
-        const email = _("#verInput");
+//   // const email = localStorage.getItem('useremail');
 
-        axios.put('api/v1/user/verify', {
-            email: email
-          })
-          .then ( response => {
+  
 
-            console.log(response);
 
-            location.replace("/login.html");
-          })
-          .catch ( error => {
-            console.log(error);
-          });
+// });
 
-    })
+// if (verifyForm) {
+
+//     verifyForm.addEventListener('submit', e => {
+//         e.preventDefault();
+
+
+        
+
+//     })
     
-}
+// }
 
 // Login form api call
 const loginForm = _("#loginForm");
