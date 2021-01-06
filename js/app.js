@@ -7,7 +7,7 @@ function _(str) {
 
 
 // Set base url using axios global defaults
-axios.defaults.baseURL = "https://dcibackend.herokuapp.com/";
+axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
 
 // Registeration forms api call
 const regForm = _("#regForm");
@@ -26,28 +26,34 @@ if (regForm) {
         const email = _("#rEmail").value;
         const password = _("#rPwd").value;
         const messageofknow = _("#rRefer").value;
-        
-        console.log(email, password, messageofknow);
+
+        localStorage.setItem('useremail', email);
+
 
         axios.all([
 
-          axios.post('api/v1/user/register', {
+          axios.post(`api/v1/user/register`, {
             email: email,
             password: password,
             messageofknow:messageofknow
             }),
-          axios.post('api/v1/user/verify', {
+          axios.post(`api/v1/user/verify`, {
             email: email
             })
 
         ])
         .then(axios.spread((resp1, resp2) => {
 
-          console.log(resp1);
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `${resp1.data.message}`,
+            showConfirmButton: false,
+            timer: 1500
+          })
 
           const id = resp1.data.user._id;
           localStorage.setItem('userid', id);
-          console.log(id);
 
           regForm.classList.remove('show');
             
@@ -57,7 +63,13 @@ if (regForm) {
 
         }))
         .catch ( error => {
-          console.log(error);
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: `${error.message}`,
+            showConfirmButton: false,
+            timer: 2000
+          })
         });
         
 
@@ -78,7 +90,7 @@ if (personalForm) {
 
         console.log(fullname, phonenumber, occupation, gender);
 
-        axios.put('api/v1/user/register/personal/'+`${localStorage.getItem('userid')}`, {
+        axios.put(`api/v1/user/register/personal/${localStorage.getItem('userid')}`, {
             fullname: fullname,
             phonenumber: phonenumber,
             occupation:occupation,
@@ -86,16 +98,28 @@ if (personalForm) {
           })
           .then ( response => {
 
-            console.log(response);
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'A code has been sent to your email address, please input the code in the next form to verify your email address.',
+              showConfirmButton: false,
+              timer: 2000
+            })
 
             personalForm.classList.remove('show');
             
-            verifyForm.classList.add('show');
+            verifydForm.classList.add('show');
             
             progressCircle[1].classList.add('done2');
           })
           .catch ( error => {
-            console.log(error);
+            Swal.fire({
+              position: 'center',
+              icon: 'error',
+              title: `${error.data.message}`,
+              showConfirmButton: false,
+              timer: 2000
+            })
           });
 
     })
@@ -104,26 +128,45 @@ if (personalForm) {
 
 // verify info api call
 
-// document.addEventListener('load', ()=> {
 
-//   // const email = localStorage.getItem('useremail');
+if (verifydForm) {
 
-  
+    verifydForm.addEventListener('submit', e => {
+        e.preventDefault();
 
+        const email = localStorage.getItem('useremail');
+        const accesscode = _('#verInput').value;
 
-// });
+        axios.post(`api/v1/user/verified`, {
+          email: email,
+          accesscode: accesscode
+        })
+        .then(response => {
 
-// if (verifyForm) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `${response.data.message} proceed to login`,
+            showConfirmButton: false,
+            timer: 2000
+          })
 
-//     verifyForm.addEventListener('submit', e => {
-//         e.preventDefault();
+          location.replace("/login.html")
 
-
-        
-
-//     })
+        })
+        .catch(error => {
+          console.log(error);
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: `${error.data.message}`,
+            showConfirmButton: false,
+            timer: 2000
+          })
+        });
+    })
     
-// }
+}
 
 // Login form api call
 const loginForm = _("#loginForm");
@@ -133,25 +176,73 @@ if (loginForm) {
   loginForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const email = _("#lEmail");
-    const password = _("lPassword");
+    const email = _("#lEmail").value;
+    const password = _("#lPassword").value;
 
-    axios.post('api/v1/user/login', {
+    console.log(email, password);
+
+    axios.post(`api/v1/user/login`, {
       email: email,
       password: password
     })
     .then(function (response) {
 
-      console.log(response);
-
       const token = response.data.token;
       localStorage.setItem('usertoken', token);
 
-      location.replace("/update.html");
+      if(!response.data.user.verified) {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Please verify your email.',
+          showConfirmButton: false,
+          timer: 2000
+        })
+
+        // location.replace("/register.html#verifydForm");
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Login Successful. Please update your profile so you can start investing.',
+          showConfirmButton: false,
+          timer: 2000
+        })
+
+        location.replace("/update.html");
+      }
+
+      
 
     })
     .catch(function (error) {
-      console.log(error);
+      console.log(error.message);
+      if(error.message === 'Request failed with status code 404') {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: `This email is not registered`,
+          showConfirmButton: false,
+          timer: 2000
+        })
+      } else if(error.message === 'Request failed with status code 403') {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: `password is incorrect`,
+          showConfirmButton: false,
+          timer: 2000
+        })
+      } else {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: `It's not you, it's from the server`,
+          showConfirmButton: false,
+          timer: 2000
+        })
+      }
+      
     });
 
   })
