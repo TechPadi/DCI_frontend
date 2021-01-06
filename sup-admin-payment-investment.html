@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCI - Verification</title>
+    <title>DCI - Payment</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon">
                     <i><img src="img/icon%20white.png"> </i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin <sup>Dashboard</sup></div>
+                <div class="sidebar-brand-text mx-3">Super Admin <sup>Dashboard</sup></div>
             </a>
 
             <!-- Divider -->
@@ -43,22 +43,22 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="admin-dashboard.html" >
-                    <i class="fas fa-fw fa-user"></i>
+                <a class="nav-link collapsed active" href="admin-dashboard.html" >
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>            
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="admin-account.html" >
                     <i class="fas fa-fw fa-user"></i>
                     <span>Account</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-check-circle"></i>
@@ -66,9 +66,35 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="investment.html">Investment</a>
-                        <a class="collapse-item" href="admin-verification-loan.html">Loans</a>
-                        <a class="collapse-item" href="admin-dashboard-saving.html">Savings</a>
+                         <a class="collapse-item" href="sup-admin-investment.html">Investment</a>
+                        <a class="collapse-item" href="sup-admin-verification-loan.html">Loans</a>
+                        <a class="collapse-item" href="sup-admin-dashboard-saving.html">Savings</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payment"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-credit-card"></i>
+                    <span>Payment</span>
+                </a>
+                <div id="payment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                         <a class="collapse-item" href="sup-admin-payment-investment.html">Investment</a>
+                        <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#users"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Users</span>
+                </a>
+                <div id="users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                         <a class="collapse-item" href="sup-admin-customers.html">Customers</a>
+                        <a class="collapse-item" href="sup-admin-staffs.html">Staffs</a>
                     </div>
                 </div>
             </li>
@@ -76,33 +102,28 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-credit-card"></i>
-                    <span>Payment</span>
+                    <span>Ecomerce</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="admin-payment-investment.html   ">Investment</a>
-                        <a class="collapse-item" href="admin-payment-loans.html">Loans</a>
+                         <a class="collapse-item" href="admin-payment-investment.html">Manage Products</a>
+                        <a class="collapse-item" href="admin-payment-loans.html">Orders</a>
+                        <a class="collapse-item" href="#">Sales Ranking</a>
                     </div>
                 </div>
             </li>
-            <!-- Nav Item - Pages Collapse Menu -->
-           
-
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            
-
         </ul>
         <!-- End of Sidebar -->
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+         <!-- Content Wrapper -->
+         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
@@ -193,7 +214,6 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -228,7 +248,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Verification</h1>
+                    <h1 class="h3 mb-4 text-gray-800">Payment</h1>
                 
                 
                 <div class="col-lg-12">
@@ -245,9 +265,12 @@
                                       <a class="nav-link" id="pills-pending-tab" data-toggle="pill" href="#pills-pending" role="tab" aria-controls="pills-profile" aria-selected="false">Pending</a>
                                     </li>
                                     <li class="nav-item">
-                                      <a class="nav-link" id="pills-approved-tab" data-toggle="pill" href="#pills-approved" role="tab" aria-controls="pills-contact" aria-selected="false">Approved</a>
+                                      <a class="nav-link" id="pills-approved-tab" data-toggle="pill" href="#pills-approved" role="tab" aria-controls="pills-contact" aria-selected="false">Paid</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a class="nav-link" id="pills-unpaid-tab" data-toggle="pill" href="#pills-unpaid" role="tab" aria-controls="pills-contact" aria-selected="false">Unpaid</a>
+                                      </li>
+                                      <li class="nav-item">
                                         <a class="nav-link" id="pills-declined-tab" data-toggle="pill" href="#pills-declined" role="tab" aria-controls="pills-contact" aria-selected="false">Declined</a>
                                       </li>
                                   </ul>
@@ -261,10 +284,9 @@
                                                         <th>Name</th>
                                                         <th>Plan</th>
                                                         <th class="text-right">Amount</th>
-                                                        <th>Reg No</th>
+                                                        <th>Next Payment</th>
                                                         <th class="text-center">Status</th>
                                                         <th class="text-center">Action</th>
-                                                        <th class="text-center">More</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -273,7 +295,9 @@
                                                         <td>George Obe</td>
                                                         <td>Silver</td>
                                                         <td class="text-right">40,000</td>
-                                                        <td>211</td>
+                                                        <td>
+                                                            <input type="date" class="form-control">
+                                                        </td>
                                                         <td class="text-center">Pending</td>
                                                         <td class="text-center">
                                                             <a href="http://" class="text-link text-danger" title="Decline">
@@ -281,11 +305,6 @@
                                                             </a>
                                                             <a href="http://" class="text-link text-success pl-1" title="Approve">
                                                                 <i class="fas fa-fw fa-check"></i>
-                                                            </a>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#investmentModal">
-                                                                More <i class="fas fa-fw fa-ellipsis-h"></i>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -294,7 +313,7 @@
                                                         <td>Matthew Wike</td>
                                                         <td>Gold</td>
                                                         <td class="text-right">2,000,000</td>
-                                                        <td>291</td>
+                                                        <td><input type="date" class="form-control"></td>
                                                         <td class="text-center">Pending</td>
                                                         <td class="text-center">
                                                             <a href="http://" class="text-link text-danger" title="Decline">
@@ -302,11 +321,6 @@
                                                             </a>
                                                             <a href="http://" class="text-link text-success pl-1" title="Approve">
                                                                 <i class="fas fa-fw fa-check"></i>
-                                                            </a>
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#investmentModal">
-                                                                More <i class="fas fa-fw fa-ellipsis-h"></i>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -416,6 +430,57 @@
                                             </table>
                                         </div> 
                                     </div>
+                                    <div class="tab-pane fade" id="pills-unpaid" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <div class="table-responsive" width="100%">
+                                            <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                                <thead>
+                                                    <tr class="font-weight-bold">
+                                                        <th>S/N</th>
+                                                        <th>Name</th>
+                                                        <th>Plan</th>
+                                                        <th class="text-right">Amount</th>
+                                                        <th>Reg No</th>
+                                                        <th class="text-center">Status</th>
+                                                        <th class="text-center">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="">
+                                                        <td>1</td>
+                                                        <td>George Obe</td>
+                                                        <td>Silver</td>
+                                                        <td class="text-right">40,000</td>
+                                                        <td>211</td>
+                                                        <td class="text-center text-info">Unpaid</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>2</td>
+                                                        <td>Matthew Wike</td>
+                                                        <td>Gold</td>
+                                                        <td class="text-right">2,000,000</td>
+                                                        <td>291</td>
+                                                        <td class="text-center text-info">Unpaid</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> 
+                                    </div>
                                     <div class="tab-pane fade" id="pills-declined" role="tabpanel" aria-labelledby="pills-contact-tab">
                                         <div class="table-responsive" width="100%">
                                             <table class="table table-hover show" id="dataTable" cellspacing="0">
@@ -503,7 +568,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by <a href="techpadi.com.ng">Techpadi</a></span>
+                        <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
                     </div>
                 </div>
             </footer>
@@ -539,6 +604,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Completing Process Modal -->
     <div class="modal fade" id="investmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -630,7 +696,7 @@
                             </div>
                             <div class="card mt-1">
                                 <div class="card-header">
-                                  <h6 class="card-title">Proof Of Payment</h6>
+                                  <h6 class="card-title">Next Of Kin Details</h6>
                                 </div>
                                 <div class="card-body">
                                   <ul class="list-unstyled team-members">
@@ -639,9 +705,9 @@
                                             <li>
                                                 <div class="row mb-2">
                                                   <div class="col-12 font-weight-bold text-800">
-                                                    Payment Method:
+                                                    Next Of Kins Name:
                                                     <br />
-                                                    <span class="text-muted"><small>Bank Transfer/Deposit</small></span>
+                                                    <span class="text-muted"><small>Nnamdi Omoni</small></span>
                                                   </div>
                                                  
                                                 </div>
@@ -651,16 +717,61 @@
                                             <li>
                                                 <div class="row mb-2">
                                                   <div class="col-md-7 font-weight-bold text-800 col-7">
-                                                    Payment Upload:
+                                                    Relationship:
                                                     <br />
-                                                    <span class="text-muted"><img src="" width="100%" alt="" srcset=""></span>
+                                                    <span class="text-muted"><small>Uncle</small></span>
                                                   </div>
-                                                  <div class="col-12">
-                                                    <img class="avatar border-gray" src="assets/img/mike.jpg" alt="..." width="100%" >
-                                                </div>
+                                                 
                                                 </div>
                                               </li>
                                         </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Address:
+                                                    <br />
+                                                    <span class="text-muted"><small>Ada-george port harcourt</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Bank Name:
+                                                    <br />
+                                                    <span class="text-muted"><small>First Bank</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Account Name:
+                                                    <br />
+                                                    <span class="text-muted"><small>Nnamdi Omi</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Account Number:
+                                                    <br />
+                                                    <span class="text-muted"><small>2123212321</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
                                         </div>
                                     </div>
                                   </ul>
@@ -671,13 +782,12 @@
                     <div class="modal-footer">
                     <a class="btn btn-primary" href="#">Continue</a>
                 </div>
-        </div>
+                </div>
                 
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
+     <!-- Bootstrap core JavaScript-->
      <script src="vendor/jquery/jquery.min.js"></script>
      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
@@ -687,7 +797,6 @@
      <!-- Custom scripts for all pages-->
      <script src="js/admin.js"></script>
      <script src="js/main.js"></script>
-
 
 </body>
 

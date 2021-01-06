@@ -35,7 +35,7 @@
                 <div class="sidebar-brand-icon">
                     <i><img src="img/icon%20white.png"> </i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Admin <sup>Dashboard</sup></div>
+                <div class="sidebar-brand-text mx-3">Super Admin <sup>Dashboard</sup></div>
             </a>
 
             <!-- Divider -->
@@ -43,19 +43,19 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="admin-dashboard.html" >
-                    <i class="fas fa-fw fa-user"></i>
+                <a class="nav-link collapsed active" href="admin-dashboard.html" >
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
             </li>            
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="admin-account.html" >
                     <i class="fas fa-fw fa-user"></i>
                     <span>Account</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
@@ -66,9 +66,35 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="investment.html">Investment</a>
-                        <a class="collapse-item" href="admin-verification-loan.html">Loans</a>
-                        <a class="collapse-item" href="admin-dashboard-saving.html">Savings</a>
+                         <a class="collapse-item" href="sup-admin-investment.html">Investment</a>
+                        <a class="collapse-item" href="sup-admin-verification-loan.html">Loans</a>
+                        <a class="collapse-item" href="sup-admin-dashboard-saving.html">Savings</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#payment"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-credit-card"></i>
+                    <span>Payment</span>
+                </a>
+                <div id="payment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                         <a class="collapse-item" href="sup-admin-payment-investment.html">Investment</a>
+                        <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#users"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Users</span>
+                </a>
+                <div id="users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                         <a class="collapse-item" href="sup-admin-customers.html">Customers</a>
+                        <a class="collapse-item" href="sup-admin-staffs.html">Staffs</a>
                     </div>
                 </div>
             </li>
@@ -76,28 +102,23 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-credit-card"></i>
-                    <span>Payment</span>
+                    <span>Ecomerce</span>
                 </a>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="admin-payment-investment.html   ">Investment</a>
-                        <a class="collapse-item" href="admin-payment-loans.html">Loans</a>
+                         <a class="collapse-item" href="admin-payment-investment.html">Manage Products</a>
+                        <a class="collapse-item" href="admin-payment-loans.html">Orders</a>
+                        <a class="collapse-item" href="#">Sales Ranking</a>
                     </div>
                 </div>
             </li>
-            <!-- Nav Item - Pages Collapse Menu -->
-           
-
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <hr class="sidebar-divider">
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
-            
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -193,7 +214,6 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
                         </li>
-
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
@@ -234,7 +254,7 @@
                 <div class="col-lg-12">
                             <div class="card shadow mb-4">
                                 <div class="card-header pt-6">
-                                    <h5 class="card-title text-weight-bold text-800">Investment</h5>
+                                    <h5 class="card-title text-weight-bold text-800">Loans</h5>
                                   </div>
                                 <div class="card-body p-4">
                                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -503,7 +523,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by <a href="techpadi.com.ng">Techpadi</a></span>
+                        <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
                     </div>
                 </div>
             </footer>
@@ -540,7 +560,7 @@
         </div>
     </div>
 
-    <!-- Completing Process Modal -->
+
     <div class="modal fade" id="investmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -595,7 +615,7 @@
                             </div>
                             <div class="card mt-1">
                               <div class="card-header">
-                                <h6 class="card-title">Investment Details</h6>
+                                <h6 class="card-title">Loan Details</h6>
                               </div>
                               <div class="card-body">
                                 <ul class="list-unstyled team-members">
@@ -604,9 +624,9 @@
                                             <li>
                                                 <div class="row mb-2">
                                                   <div class="col-12 font-weight-bold text-800">
-                                                    Package:
+                                                    Loan Type:
                                                     <br />
-                                                    <span class="text-muted"><small>Silver</small></span>
+                                                    <span class="text-muted"><small>One (1) month 20% interest</small></span>
                                                   </div>
                                                  
                                                 </div>
@@ -624,24 +644,13 @@
                                                 </div>
                                               </li>
                                         </div>
-                                    </div>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="card mt-1">
-                                <div class="card-header">
-                                  <h6 class="card-title">Proof Of Payment</h6>
-                                </div>
-                                <div class="card-body">
-                                  <ul class="list-unstyled team-members">
-                                    <div class="row">
                                         <div class="col-md-6">
                                             <li>
                                                 <div class="row mb-2">
-                                                  <div class="col-12 font-weight-bold text-800">
-                                                    Payment Method:
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Employee's Name:
                                                     <br />
-                                                    <span class="text-muted"><small>Bank Transfer/Deposit</small></span>
+                                                    <span class="text-muted"><small>Beauty fred</small></span>
                                                   </div>
                                                  
                                                 </div>
@@ -651,16 +660,84 @@
                                             <li>
                                                 <div class="row mb-2">
                                                   <div class="col-md-7 font-weight-bold text-800 col-7">
-                                                    Payment Upload:
+                                                    Annual Income:
                                                     <br />
-                                                    <span class="text-muted"><img src="" width="100%" alt="" srcset=""></span>
+                                                    <span class="text-muted"><small>1,000,000</small></span>
                                                   </div>
-                                                  <div class="col-12">
-                                                    <img class="avatar border-gray" src="assets/img/mike.jpg" alt="..." width="100%" >
-                                                </div>
+                                                 
                                                 </div>
                                               </li>
                                         </div>
+                                    </div>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="card mt-1">
+                                <div class="card-header">
+                                  <h6 class="card-title">Collateral Details</h6>
+                                </div>
+                                <div class="card-body">
+                                  <ul class="list-unstyled team-members">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-12 font-weight-bold text-800">
+                                                    Collateral Type:
+                                                    <br />
+                                                    <span class="text-muted"><small>Cars</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Collateral Worth:
+                                                    <br />
+                                                    <span class="text-muted"><small>4,000,000</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Ownership State:
+                                                    <br />
+                                                    <span class="text-muted"><small>Owner</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Collateral Location:
+                                                    <br />
+                                                    <span class="text-muted"><small>Rivers State</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Documents:
+                                                  </div>
+                                                  <div class="col-12">
+                                                    <a href="./assets/img/slide-1.jpg" class="btn btn-sm btn-primary" download rel="noopener noreferrer" target="_blank">Download File</a>
+                                                </div>
+                                                </div>
+                                              </li>
                                         </div>
                                     </div>
                                   </ul>
@@ -671,13 +748,12 @@
                     <div class="modal-footer">
                     <a class="btn btn-primary" href="#">Continue</a>
                 </div>
-        </div>
+                </div>
                 
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
+     <!-- Bootstrap core JavaScript-->
      <script src="vendor/jquery/jquery.min.js"></script>
      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
@@ -687,7 +763,6 @@
      <!-- Custom scripts for all pages-->
      <script src="js/admin.js"></script>
      <script src="js/main.js"></script>
-
 
 </body>
 

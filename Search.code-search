@@ -1,0 +1,109 @@
+# Query: techpadi
+# ContextLines: 1
+
+60 results - 21 files
+
+Account.html:
+  480                    <div class="copyright text-center my-auto">
+  481:                       <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  482                    </div>
+
+admin-account.html:
+  494                    <div class="copyright text-center my-auto">
+  495:                       <span>Copyright DCI  &copy; 2020. Designed by <a href="<a href="http://techpadi.com.ng" targer="_blank">Techpadi</a>.com.ng"><a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></a></span>
+  496                    </div>
+
+admin-dashboard-saving.html:
+  502                      <div class="copyright text-center my-auto">
+  503:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  504                      </div>
+
+admin-dashboard.html:
+  461                      <div class="copyright text-center my-auto">
+  462:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  463                      </div>
+
+admin-payment-investment.html:
+  549                      <div class="copyright text-center my-auto">
+  550:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  551                      </div>
+
+admin-payment-loans.html:
+  547                      <div class="copyright text-center my-auto">
+  548:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  549                      </div>
+
+admin-verification-loan.html:
+  502                      <div class="copyright text-center my-auto">
+  503:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  504                      </div>
+
+dashboard.html:
+  468                      <div class="copyright text-center my-auto">
+  469:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  470                      </div>
+
+downgrade.html:
+  740                      <div class="copyright text-center my-auto">
+  741:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  742                      </div>
+
+invest.html:
+  719                      <div class="copyright text-center my-auto">
+  720:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  721                      </div>
+
+investment.html:
+  505                      <div class="copyright text-center my-auto">
+  506:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="<a href="http://techpadi.com.ng" targer="_blank">Techpadi</a>.com.ng"><a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></a></span>
+  507                      </div>
+
+loan.html:
+  521                      <div class="copyright text-center my-auto">
+  522:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  523                      </div>
+
+notification.html:
+  332                      <div class="copyright text-center my-auto">
+  333:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  334                      </div>
+
+payment.html:
+  262                      <div class="copyright text-center my-auto">
+  263:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  264                      </div>
+
+renew.html:
+  275                      <div class="copyright text-center my-auto">
+  276:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  277                      </div>
+
+savings.html:
+  314                      <div class="copyright text-center my-auto">
+  315:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  316                      </div>
+
+sup-admin-dashboard.html:
+  450                      <div class="copyright text-center my-auto">
+  451:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://<a href="http://techpadi.com.ng" targer="_blank">Techpadi</a>.com.ng" target="_blank"><a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></a> </span>
+  452                      </div>
+
+sup-admin-investment.html:
+  526                      <div class="copyright text-center my-auto">
+  527:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://<a href="http://techpadi.com.ng" targer="_blank">Techpadi</a>.com.ng" target="_blank"><a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></a></span>
+  528                      </div>
+
+terminate.html:
+  272                      <div class="copyright text-center my-auto">
+  273:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  274                      </div>
+
+update.html:
+  404                      <div class="copyright text-center my-auto">
+  405:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  406                      </div>
+
+upgrade.html:
+  737                      <div class="copyright text-center my-auto">
+  738:                         <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" targer="_blank">Techpadi</a></span>
+  739                      </div>
