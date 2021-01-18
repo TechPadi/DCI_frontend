@@ -189,7 +189,7 @@ function _(str) {
   
   
   // Dashboard api call
-  let [sti, roi, invAm, actLon, mReb, userProfile] = [_("#sti"), _("#roi"), _("#invAm"), _("#actLon"), _("#mReb"), _("#userProfile")];
+  let [sti, roi, invAm, actLon, mReb, userProfile, roiCoi] = [_("#sti"), _("#roi"), _("#invAm"), _("#actLon"), _("#mReb"), _("#userProfile"), _("#roiCoi")];
   // console.log(sti, roi)
   window.onload = async () => {
     console.log('page is fully loaded');
@@ -206,6 +206,25 @@ function _(str) {
       const img = `${(!response.data.user.image)?"img/undraw_profile.svg":response.data.user.image.path}`;
 
       localStorage.setItem('userAvatar', img);
+
+      roiCoi.innerHTML = `<div class="row no-gutters align-items-center">
+      <a href="#">
+          <div class="col mr-2">
+              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+              ROI + COI
+              </div>
+              <div class="row no-gutters align-items-center">
+                  <div class="col-auto">
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">₦${(response.data.user.planDetails.TotalReturn)?response.data.user.planDetails.TotalReturn:0}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </a>
+      <div class="col-auto">
+          <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+      </div>
+  </div>`;
       
       userProfile.innerHTML = `
       <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
@@ -238,7 +257,7 @@ function _(str) {
       <a href="#">
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                  ROI (Investment + Profit)</div>
+                  ROI </div>
   <div class="h5 mb-0 font-weight-bold text-gray-800">₦${Number(response.data.user.investmentReturnsBalance)}</div>
           </div>
       </a>

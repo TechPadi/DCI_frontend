@@ -11301,3 +11301,8 @@ form.user .verification .form-control-user {
   border-radius: 5rem;
   padding: 1.5rem 1rem;
 }
+
+.tr-active {
+  color: #858796;
+    background-color: rgba(0, 0, 0, 0.075);
+}

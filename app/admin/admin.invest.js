@@ -59,10 +59,30 @@ getPending()
 
 function recieveData(data) {
     const actualuser = dataAll.filter(user=>user.accesscode==data)[0]
-    const admin =JSON.parse(localStorage.getItem('user'))
-    const id =admin._id
-    const action = `Verifiey investment of ${actualuser.fullname}`
-    const dataBody ={user:actualuser,admin,id,action}
+    const admin1 =JSON.parse(localStorage.getItem('user'))
+    const AdminId =admin1._id
+    const AdminFullname =admin1.fullname
+    const AdminPhonenumber =admin1.phonenumber
+    const AdminEmail =admin1.email
+    const admin ={
+        fullname:AdminFullname,
+        _id:AdminId,
+        phonenumber:AdminPhonenumber,
+        emaiil:AdminEmail
+    }
+    const UserId =actualuser._id
+    const UserFullname =actualuser.fullname
+    const UserPhonenumber =actualuser.phonenumber
+    const UserEmail =actualuser.email
+    const user ={
+        fullname:UserFullname,
+        _id:UserId,
+        phonenumber:UserPhonenumber,
+        emaiil:UserEmail
+    }
+    const action = `Verified investment of ${actualuser.fullname}`
+    const dataBody ={user,admin,id,action}
+
     
     axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/user/verifyinvestor/investment/${id}`,dataBody)
     .then(res=>{

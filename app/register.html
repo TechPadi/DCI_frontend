@@ -52,17 +52,17 @@
                             <form class="user show" id="regForm">
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                        <input type="email" class="form-control form-control-user" required id="rEmail" placeholder="Email" required>
+                                        <input type="email" class="form-control form-control-user" id="rEmail" placeholder="Email" required>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user" required
+                                        <input type="password" class="form-control form-control-user"
                                             id="rPwd" placeholder="Password" required>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user" required
-                                            id="exampleRepeatPassword" placeholder="Confrim Password" required>
+                                        <input type="password" class="form-control form-control-user" id="rCPwd" placeholder="Confrim Password" required onkeyup='checkPassword()'>
+                                            <div class="feedback"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -75,7 +75,7 @@
                                         <option value="friend">A Friend</option>
                                       </select>
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Next">
+                                <input type="submit" class="btn btn-primary btn-user btn-block" id="firstRegBtn" value="Next">
                             </form>
                             <form class="user" id="personalForm">
                                 <div class="form-group row">
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="number" class="form-control"
+                                        <input type="number" class="form-control form-control-user"
                                             id="pNumber" placeholder="Phone Number" required>
                                     </div>
                                     <div class="col-sm-6">
@@ -107,11 +107,11 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-12 ml-3">
-                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" required value="option1">
+                                        <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="checkTerms" required value="option1">
                                     <label class="form-check-label" for="inlineRadio1">I have read and agreed to the terms and condition</label>
                                     </div>
                                 </div>
-                                <input type="submit" class="btn btn-primary btn-user btn-block" value="Next" >
+                                <input type="submit" class="btn btn-primary btn-user btn-block" id="secondRegBtn" value="Next" >
                             </form>
                             <hr>
                             <div class="text-center">

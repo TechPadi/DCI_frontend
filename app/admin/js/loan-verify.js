@@ -12,7 +12,6 @@ axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/dashboard/${id}`)
 })
 
 
-axios.defaults.baseURL = "https://dcibackend.herokuapp.com/";
 
 
 let usersAwaitingAproval=[]
@@ -62,25 +61,44 @@ getPending()
 
 function recieveData(data) {
     const actualuser = dataAll.filter(user=>user.accesscode==data)[0]
-    const admin =JSON.parse(localStorage.getItem('user'))
-    const id =admin._id
+    const admin1 =JSON.parse(localStorage.getItem('user'))
+    const AdminId =admin1._id
+    const AdminFullname =admin1.fullname
+    const AdminPhonenumber =admin1.phonenumber
+    const AdminEmail =admin1.email
+    const admin ={
+        fullname:AdminFullname,
+        _id:AdminId,
+        phonenumber:AdminPhonenumber,
+        emaiil:AdminEmail
+    }
+    const UserId =actualuser._id
+    const UserFullname =actualuser.fullname
+    const UserPhonenumber =actualuser.phonenumber
+    const UserEmail =actualuser.email
+    const user ={
+        fullname:UserFullname,
+        _id:UserId,
+        phonenumber:UserPhonenumber,
+        emaiil:UserEmail
+    }
     const action = `Verified loan of ${actualuser.fullname}`
-    const dataBody ={user:actualuser,admin,id,action}
+    const dataBody ={user,admin,id,action}
     console.log(dataBody)
-    axios.post(`https://dcibackend.herokuapp.com/api/v1/activate/loan/${actualuser._id}`)
-    // axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/user/verifyinvestor/investment/${id}`,dataBody)
-    // .then(res=>{
-    //     console.log(res)
-    //     // Swal.fire({
-    //     //     position: 'center',
-    //     //     icon: 'success',
-    //     //     title: `Successfully activated `,
-    //     //     showConfirmButton: false,
-    //     //     timer: 2000
-    //     //   })
-    // }).catch(err=>{
-
-    // })
+    axios.post(`https://dcibackend.herokuapp.com/api/v1/activate/loan/${actualuser._id}`,dataBody)
+    .then(res=>{
+        console.log(res)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `Successfully activated `,
+            showConfirmButton: false,
+            timer: 2000
+          })
+    }).catch(err=>{
+        console.log(err)
+    })
+    
 }
 
 function logout(params) {

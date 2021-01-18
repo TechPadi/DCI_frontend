@@ -393,6 +393,10 @@ if (tables) {
 
       let newEl = [];
 
+      let tr = event.target.parentElement;
+      console.log(tr);
+      tr.classList.add = "tr-active"
+
       Array.from(event.target.parentElement.children)
         .forEach(item => {
 
