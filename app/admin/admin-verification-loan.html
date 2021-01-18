@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DCI - Verification</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                <div class="sidebar-brand-icon">
+                    <i><img src="../img/icon%20white.png"> </i>
+                </div>
+                <div class="sidebar-brand-text mx-3">User <sup>Dashboard</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="admin-dashboard.html" >
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>            
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="Account.html" >
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Account</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-check-circle"></i>
+                    <span>Verification</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                         <a class="collapse-item" href="investment.html">Investment</a>
+                        <a class="collapse-item" href="admin-verification-loan.html">Loans</a>
+                        <a class="collapse-item" href="admin-dashboard-saving.html">Savings</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-credit-card"></i>
+                    <span>Payment</span>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                         <a class="collapse-item" href="admin-payment-investment.html">Pay Investors</a>
+                        <a class="collapse-item" href="admin-payment-loans.html">Completed Payment</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <!-- <i class="fas fa-bell fa-fw"></i> -->
+                                <!-- Counter - Alerts -->
+                                <!-- <span class="badge badge-danger badge-counter">3+</span> -->
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2020</div>
+                                        <span class="font-weight-bold">A new investment package is available to you!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2020</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Downgrade Alert: We've noticed downgrade attempts from your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="AdminName">loading...</span>
+                                <img class="img-profile rounded-circle"
+                                    src="../img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="Account.html">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Account
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-4 text-gray-800">Verification</h1>
+                
+                
+                <div class="col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-header pt-6">
+                                    <h5 class="card-title text-weight-bold text-800">Loans</h5>
+                                  </div>
+                                <div class="card-body p-4">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">All</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="pills-pending-tab" data-toggle="pill" href="#pills-pending" role="tab" aria-controls="pills-profile" aria-selected="false">Pending</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="pills-approved-tab" data-toggle="pill" href="#pills-approved" role="tab" aria-controls="pills-contact" aria-selected="false">Approved</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-declined-tab" data-toggle="pill" href="#pills-declined" role="tab" aria-controls="pills-contact" aria-selected="false">Declined</a>
+                                      </li>
+                                  </ul>
+                                  <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-home-tab">
+                                        <div class="table-responsive" width="100%">
+                                            <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                                <thead>
+                                                    <tr class="font-weight-bold">
+                                                        <th>S/N</th>
+                                                        <th>Name</th>
+                                                        <th>Plan</th>
+                                                        <th class="text-right">Amount</th>
+                                                        <th>Reg No</th>
+                                                        <th class="text-center">Status</th>
+                                                        <th class="text-center">Action</th>
+                                                        <th class="text-center">More</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="awaitApproval">
+                                                    <!-- <tr class="">
+                                                        <td>1</td>
+                                                        <td>George Obe</td>
+                                                        <td>Silver</td>
+                                                        <td class="text-right">40,000</td>
+                                                        <td>211</td>
+                                                        <td class="text-center">Pending</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#investmentModal">
+                                                                More <i class="fas fa-fw fa-ellipsis-h"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr> -->
+                                                    <!-- <tr class="">
+                                                        <td>2</td>
+                                                        <td>Matthew Wike</td>
+                                                        <td>Gold</td>
+                                                        <td class="text-right">2,000,000</td>
+                                                        <td>291</td>
+                                                        <td class="text-center">Pending</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#investmentModal">
+                                                                More <i class="fas fa-fw fa-ellipsis-h"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr> -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-pending" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                        <div class="table-responsive" width="100%">
+                                            <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                                <thead>
+                                                    <tr class="font-weight-bold">
+                                                        <th>S/N</th>
+                                                        <th>Name</th>
+                                                        <th>Plan</th>
+                                                        <th class="text-right">Amount</th>
+                                                        <th>Reg No</th>
+                                                        <th class="text-center">Status</th>
+                                                        <th class="text-center">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="">
+                                                        <td>1</td>
+                                                        <td>George Obe</td>
+                                                        <td>Silver</td>
+                                                        <td class="text-right">40,000</td>
+                                                        <td>211</td>
+                                                        <td class="text-center">Pending</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>2</td>
+                                                        <td>Matthew Wike</td>
+                                                        <td>Gold</td>
+                                                        <td class="text-right">2,000,000</td>
+                                                        <td>291</td>
+                                                        <td class="text-center">Pending</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>   
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-approved" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <div class="table-responsive" width="100%">
+                                            <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                                <thead>
+                                                    <tr class="font-weight-bold">
+                                                        <th>S/N</th>
+                                                        <th>Name</th>
+                                                        <th>Plan</th>
+                                                        <th class="text-right">Amount</th>
+                                                        <th>Reg No</th>
+                                                        <th class="text-center">Status</th>
+                                                        <th class="text-center">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="">
+                                                        <td>1</td>
+                                                        <td>George Obe</td>
+                                                        <td>Silver</td>
+                                                        <td class="text-right">40,000</td>
+                                                        <td>211</td>
+                                                        <td class="text-center text-success">Paid</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>2</td>
+                                                        <td>Matthew Wike</td>
+                                                        <td>Gold</td>
+                                                        <td class="text-right">2,000,000</td>
+                                                        <td>291</td>
+                                                        <td class="text-center text-success">Paid</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> 
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-declined" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                        <div class="table-responsive" width="100%">
+                                            <table class="table table-hover show" id="dataTable" cellspacing="0">
+                                                <thead>
+                                                    <tr class="font-weight-bold">
+                                                        <th>S/N</th>
+                                                        <th>Name</th>
+                                                        <th>Plan</th>
+                                                        <th class="text-right">Amount</th>
+                                                        <th>Reg No</th>
+                                                        <th class="text-center">Status</th>
+                                                        <th class="text-center">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="">
+                                                        <td>1</td>
+                                                        <td>George Obe</td>
+                                                        <td>Silver</td>
+                                                        <td class="text-right">40,000</td>
+                                                        <td>211</td>
+                                                        <td class="text-center text-danger">Declined</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td>2</td>
+                                                        <td>Matthew Wike</td>
+                                                        <td>Gold</td>
+                                                        <td class="text-right">2,000,000</td>
+                                                        <td>291</td>
+                                                        <td class="text-center text-danger">Declined</td>
+                                                        <td class="text-center">
+                                                            <a href="http://" class="text-link text-danger" title="Decline">
+                                                                <i class="fas fa-fw fa-times"></i>
+                                                            </a>
+                                                            <a href="http://" class="text-link text-success pl-1" title="Approve">
+                                                                <i class="fas fa-fw fa-check"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> 
+                                    </div>
+                                  </div>
+                                   
+                                    <div class="buttons">
+                                        <a href="#" class="btn btn-primary btn-icon-split back">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-left"></i>
+                                        </span>
+                                        <span class="text">Back</span>
+                                    </a>
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#upgradeModal">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Next</span>
+                                    </a>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                
+                    
+                    
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright DCI  &copy; <span id="year"></span>. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completing Process Modal -->
+    <div class="modal fade" id="investmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                            <div class="card card-user">
+                                <div class="card-header">
+                                    <h6 class="card-title">Profile Details</h6>
+                                  </div>
+                                <div class="author p-4">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="..." width="150px" height="150px">
+                                        </div>
+                                        <div class="col-md-8">
+                                           
+                                            <h4 class="title font-weight-bold text-800 mt-1">Miracle Great</h4>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-2">
+                                                      <div class="font-weight-bold text-800">
+                                                        Email:
+                                                        <br />
+                                                        <span class="text-muted"><small>miracle@gmail.com</small></span>
+                                                      </div>
+                                                    </div>
+                                                <div class="col-md-6 mb-2">
+                                                  <div class="font-weight-bold text-800">
+                                                    Phone Number:
+                                                    <br />
+                                                    <span class="text-muted"><small>081015222</small></span>
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6 mb-2">
+                                                    <div class="font-weight-bold text-800">
+                                                      Occupation:
+                                                      <br />
+                                                      <span class="text-muted"><small>Banker</small></span>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                                    
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-1">
+                              <div class="card-header">
+                                <h6 class="card-title">Loan Details</h6>
+                              </div>
+                              <div class="card-body">
+                                <ul class="list-unstyled team-members">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-12 font-weight-bold text-800">
+                                                    Loan Type:
+                                                    <br />
+                                                    <span class="text-muted"><small>One (1) month 20% interest</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Amount:
+                                                    <br />
+                                                    <span class="text-muted"><small>2,000,000</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Employee's Name:
+                                                    <br />
+                                                    <span class="text-muted"><small>Beauty fred</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Annual Income:
+                                                    <br />
+                                                    <span class="text-muted"><small>1,000,000</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="card mt-1">
+                                <div class="card-header">
+                                  <h6 class="card-title">Collateral Details</h6>
+                                </div>
+                                <div class="card-body">
+                                  <ul class="list-unstyled team-members">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-12 font-weight-bold text-800">
+                                                    Collateral Type:
+                                                    <br />
+                                                    <span class="text-muted"><small>Cars</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Collateral Worth:
+                                                    <br />
+                                                    <span class="text-muted"><small>4,000,000</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Ownership State:
+                                                    <br />
+                                                    <span class="text-muted"><small>Owner</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Collateral Location:
+                                                    <br />
+                                                    <span class="text-muted"><small>Rivers State</small></span>
+                                                  </div>
+                                                 
+                                                </div>
+                                              </li>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <li>
+                                                <div class="row mb-2">
+                                                  <div class="col-md-7 font-weight-bold text-800 col-7">
+                                                    Documents:
+                                                  </div>
+                                                  <div class="col-12">
+                                                    <a href="../assets/img/slide-1.jpg" class="btn btn-sm btn-primary" download rel="noopener noreferrer" target="_blank">Download File</a>
+                                                </div>
+                                                </div>
+                                              </li>
+                                        </div>
+                                    </div>
+                                  </ul>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+                    <div class="modal-footer">
+                    <a class="btn btn-primary" href="#">Continue</a>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/admin.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+
+
+    <!-- Custom scripts -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/loan-verify.js"></script>
+
+
+</body>
+
+</html>
