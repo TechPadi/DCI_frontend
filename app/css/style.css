@@ -11250,6 +11250,11 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+.tr-active {
+  color: #858796 !important;
+  background-color: rgba(0, 0, 0, 0.075) !important;
+}
+
 
 
 
@@ -11300,9 +11305,4 @@ form.user .verification .form-control-user {
   font-size: 0.8rem;
   border-radius: 5rem;
   padding: 1.5rem 1rem;
-}
-
-.tr-active {
-  color: #858796;
-    background-color: rgba(0, 0, 0, 0.075);
 }

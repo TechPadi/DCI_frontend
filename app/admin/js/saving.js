@@ -92,9 +92,10 @@ function recieveData(data) {
         emaiil:UserEmail
     }
     const action = `Verified Save To Invest of ${actualuser.fullname}`
-    const dataBody ={user,admin,id,action}
+    const amount = parseInt(actualuser.savingDets.amount)
+    const dataBody ={user,admin,id,action,amount}
     console.log(dataBody)
-    axios.post(`https://dcibackend.herokuapp.com/api/v1/add/savings/${actualuser._id}`,dataBody)
+    axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/user/verifyaddtosti/save/${actualuser._id}`,dataBody)
     .then(res=>{
         console.log(res)
         // Swal.fire({

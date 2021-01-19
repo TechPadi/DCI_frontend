@@ -5,8 +5,11 @@ document.getElementById('year').innerHTML=year
 const  id =localStorage.getItem('id')
 axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/dashboard/${id}`)
 .then(res=>{
+    console.log(res.data.user.referralsUsers)
     const {fullname,occupation,email,phonenumber,residentialAddress,
-        nearestBusStop,town,State,country,DateOfBirth,idType,idNumber} =res.data.user
+        nearestBusStop,town,State,country,DateOfBirth,idType,idNumber,accesscode} =res.data.user
+        document.getElementById('accesscode1').textContent=accesscode?accesscode:"NA"
+        
     document.getElementById('AdminName').innerHTML=fullname
     document.getElementById('AdminName1').innerHTML=fullname
     document.getElementById('AdminName2').value=fullname

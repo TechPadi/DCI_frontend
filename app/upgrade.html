@@ -108,7 +108,7 @@
             </li>
             
             <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item active">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="ri-file-list-line"></i>
@@ -123,7 +123,7 @@
                         <a class="collapse-item" href="terminate.html">Terminate</a>
                     </div>
                 </div>
-            </li> -->
+            </li>
 
             
              <!-- Nav Item - Pages Collapse Menu -->
@@ -306,11 +306,7 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>You invested <code>1,000,000</code> 
-                                        <br>For <code>Biannual Monthly Investment</code> 
-                                        <br> Package is active till
-                                        <code>05/03/2021</code> 
-                                        <br>Proceed with package downgrade below, be sure to have read the terms.</p>
+                                    <p id="renewInvest"></p>
                                    
                                 </div>
                             </div>
@@ -330,212 +326,26 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="card-body">
-                                        <div class="row">
-                                            <div class="package col-xl-3 col-md-6 mb-4">
-                                                <div class="card shadow h-100 pb-1">
-                                                    <div class="card-body" id="plan">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="row no-gutters align-items-center">
-                                                                    <div class="col-auto">
-                                                                        <div class="h4 mb-0 mr-3 font-weight-bold text-800">DCI SILVER</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="text-s mb-1">Minimum 1,00,000 NGN
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Total return on investment as much as 24% Bi-annually.</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">5% return on investment is paid monthly</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract for six months</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract can be repudiated at any point subject to agree the terms and conditions</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <a class="nav-link collapsed" href="#" >
-                                        <i class="fas fa-fw fa-plus"></i>
-                                        <span>SELECT</span>                                    
-                                                    </a>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="package col-xl-3 col-md-6 mb-4">
-                                                <div class="card shadow h-100 pb-1">
-                                                    <div class="card-body" id="plan">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="row no-gutters align-items-center">
-                                                                    <div class="col-auto">
-                                                                        <div class="h4 mb-0 mr-3 font-weight-bold text-800">DCI GOLD</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="text-s mb-1">Minimum 2,00,000 NGN
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Total return on investment as much as 27% Bi-annually.</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">4.5% return on investment is paid monthly</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract for six months</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract can be repudiated at any point subject to agree the terms and conditions</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <a class="nav-link collapsed" href="#" >
-                                        <i class="fas fa-fw fa-plus"></i>
-                                        <span>SELECT</span>                                    
-                                                    </a>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="package col-xl-3 col-md-6 mb-4">
-                                                <div class="card shadow h-100 pb-1">
-                                                    <div class="card-body" id="plan">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="row no-gutters align-items-center">
-                                                                    <div class="col-auto">
-                                                                        <div class="h4 mb-0 mr-3 font-weight-bold text-800">DCI DIAMOND</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="text-s mb-1">Minimum 3,00,000 NGN
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Total return on investment as much as 30% Bi-annually.</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">5% return on investment is paid monthly</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract for six months</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract can be repudiated at any point subject to agree the terms and conditions</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <a class="nav-link collapsed" href="#" >
-                                        <i class="fas fa-fw fa-plus"></i>
-                                        <span>SELECT</span>                                    
-                                                    </a>
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="package col-xl-3 col-md-6 mb-4">
-                                                <div class="card shadow h-100 pb-1">
-                                                    <div class="card-body" id="plan">
-                                                        <div class="row no-gutters align-items-center">
-                                                            <div class="col mr-2">
-                                                                <div class="row no-gutters align-items-center">
-                                                                    <div class="col-auto">
-                                                                        <div class="h4 mb-0 mr-3 font-weight-bold text-800">DCI PLATINUM</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="text-s mb-1">Minimum 4,00,000 NGN
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="row">
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Total return on investment as much as 33% Bi-annually.</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">5.5% return on investment is paid monthly</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract for six months</div>
-                                                            </div>
-                                                            <div class="div col-2">
-                                                                <i class="text-xs fas fa-fw fa-check"></i> 
-                                                            </div>
-                                                            <div class="div col-10">
-                                                                <div class="text-xs mb-1">Contract can be repudiated at any point subject to agree the terms and conditions</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-    
-                                                    <a class="nav-link collapsed" href="#" >
-                                        <i class="fas fa-fw fa-plus"></i>
-                                        <span>SELECT</span>                                    
-                                                    </a>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                              <a class="nav-link active" id="bmi-tab" data-toggle="tab" href="#bmi" role="tab" aria-controls="bmi" aria-selected="true">BMI</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="ami-tab" data-toggle="tab" href="#ami" role="tab" aria-controls="ami" aria-selected="false">AMI</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="bfi-tab" data-toggle="tab" href="#bfi" role="tab" aria-controls="bfi" aria-selected="false">BFI</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="afi-tab" data-toggle="tab" href="#afi" role="tab" aria-controls="afi" aria-selected="false">AFI</a>
+                                            </li>
+                                          </ul>
+                                          <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="bmi" role="tabpanel" aria-labelledby="bmi-tab">...</div>
+                                            <div class="tab-pane fade" id="ami" role="tabpanel" aria-labelledby="ami-tab">...</div>
+                                            <div class="tab-pane fade" id="bfi" role="tabpanel" aria-labelledby="bfi-tab">...</div>
+                                            <div class="tab-pane fade" id="afi" role="tabpanel" aria-labelledby="afi-tab">...</div>
+                                          </div>
                                     </div>
 
                                     <div class="card-body">
@@ -806,7 +616,8 @@
  <script src="js/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/upgrade.js"></script>
+    <script src="js/dashboard.js"></script>
     <script src="js/logout.js"></script>
 
 

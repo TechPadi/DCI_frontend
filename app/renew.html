@@ -108,7 +108,7 @@
             </li>
             
             <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item active">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="ri-file-list-line"></i>
@@ -123,7 +123,7 @@
                         <a class="collapse-item" href="terminate.html">Terminate</a>
                     </div>
                 </div>
-            </li> -->
+            </li>
 
             
              <!-- Nav Item - Pages Collapse Menu -->
@@ -266,9 +266,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userProfile" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -311,18 +309,33 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>You invested <code>1,000,000</code> 
-                                        <br>For <code>Biannual Monthly Investment</code> 
-                                        <br> Package active till <code>05/03/2021</code> 
-                                        <br>Proceed with package renewal below, make sure to read the terms of downgrade.</p>
+                                    <p id="renewInvest"></p>
                                     <br>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <button class="btn btn-primary btn-icon-split" id="renewBtn">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-flag"></i>
                                         </span>
                                         <span class="text">Renew Now</span>
-                                    </a>
+                                    </button>
                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12 mb-4">
+
+
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Please read our terms</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Our terms and conditions are design to enable us serve you without hitches and
+                                        give you the best value for your investment plan with us, as such we encourage
+                                        you to get familiar with them</p>
+                                        <p class="mb-0">You can read our full <a href="/terms.html" target="_blank">terms and conditions by clicking HERE</a></p>
                                 </div>
                             </div>
 
@@ -380,7 +393,8 @@
  <script src="js/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/renew.js"></script>
+    <script src="js/dashboard.js"></script>
     <script src="js/logout.js"></script>
 
 </body>

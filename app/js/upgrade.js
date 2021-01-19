@@ -1,0 +1,19 @@
+function _(str) {
+    return document.querySelector(str);
+}
+
+// Set base url using axios global defaults
+axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
+  
+const renewInvest = _("#renewInvest");
+
+renewInvest.innerHTML = `You invested <code>${localStorage.getItem('dataPrice')}</code> 
+<br>For <code>${localStorage.getItem('dataName')} Biannual Monthly Investment</code> 
+<br>Proceed with package renewal below, make sure to read the terms of downgrade.`;
+
+// const userProfile = _("#userProfile");
+
+userProfile.innerHTML = `
+      <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
+      <img class="img-profile rounded-circle" src=${localStorage.getItem('userAvatar')}>
+      `;

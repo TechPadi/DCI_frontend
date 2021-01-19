@@ -3,7 +3,11 @@ axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
 
 function _(str) {
     return document.querySelector(str);
-  }
+}
+
+function currencyFormat(num) {
+  return '₦' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
 
 
 async function startAppSave(params) {
@@ -15,7 +19,7 @@ async function startAppSave(params) {
         Authorization: `Bearer ${localStorage.getItem('usertoken')}`
       }
     }).then(response=>{
-        const balance = response.data.user.savingBalance
+        const balance = currencyFormat(response.data.user.savingBalance);
         
           _("#saveBalance").innerHTML = balance;
       

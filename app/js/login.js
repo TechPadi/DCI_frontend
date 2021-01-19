@@ -70,7 +70,7 @@ function _(str) {
             timer: 5000
           })
   
-          location.replace("/app/dashboard.html");
+          // location.replace("/app/dashboard.html");
         }else{
           Swal.fire({
             position: 'center',
