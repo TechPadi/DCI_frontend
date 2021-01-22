@@ -11250,6 +11250,16 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+
+
+/* @media (min-width: 0px) {
+  
+} */
+
+.table tbody tr {
+  cursor: pointer;
+}
+.table tbody tr:active,
 .tr-active {
   color: #858796 !important;
   background-color: rgba(0, 0, 0, 0.075) !important;

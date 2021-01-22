@@ -12,7 +12,8 @@
     <title>DCI - Upgrade</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -60,16 +61,16 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" >
+                <a class="nav-link collapsed" href="#">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Account</span>
                 </a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            
+
             <!-- Nav Item - Utilities Collapse Menu -->
-            
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvest"
                     aria-expanded="true" aria-controls="collapseInvest">
@@ -106,7 +107,7 @@
                     <span>Savings</span>
                 </a>
             </li>
-            
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -125,29 +126,29 @@
                 </div>
             </li>
 
-            
-             <!-- Nav Item - Pages Collapse Menu -->
-            
+
+            <!-- Nav Item - Pages Collapse Menu -->
+
 
             <!-- Nav Item - Utilities Collapse Menu -->
-           
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            
+
 
             <!-- Nav Item - Pages Collapse Menu -->
-           
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -157,7 +158,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -176,17 +177,17 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-<!-- Nav Item - Alerts -->
+                        <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <i class="fas fa-bell fa-fw"></i> 
-                                 
-                                <span class="badge badge-danger badge-counter"></span> 
+                                <i class="fas fa-bell fa-fw"></i>
+
+                                <span class="badge badge-danger badge-counter"></span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -256,9 +257,9 @@
                             </div>
                         </li>
 
-                        
 
-                        
+
+
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -267,8 +268,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userProfile" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -295,209 +295,1999 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Upgrade Area</h1>
-                    
-                    
-                    
-                    
+
+
+
+
                     <div class="col-lg-12">
 
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p id="renewInvest"></p>
-                                   
-                                </div>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
                             </div>
+                            <div class="card-body">
+                                <p id="renewInvest"></p>
 
+                            </div>
                         </div>
 
+                    </div>
 
-                
-                
-                
-                
-                <div class="col-lg-12">
 
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Select upgrade package</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="card-body">
-                                        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
-                                            <li class="nav-item">
-                                              <a class="nav-link active" id="bmi-tab" data-toggle="tab" href="#bmi" role="tab" aria-controls="bmi" aria-selected="true">BMI</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" id="ami-tab" data-toggle="tab" href="#ami" role="tab" aria-controls="ami" aria-selected="false">AMI</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" id="bfi-tab" data-toggle="tab" href="#bfi" role="tab" aria-controls="bfi" aria-selected="false">BFI</a>
-                                            </li>
-                                            <li class="nav-item">
-                                              <a class="nav-link" id="afi-tab" data-toggle="tab" href="#afi" role="tab" aria-controls="afi" aria-selected="false">AFI</a>
-                                            </li>
-                                          </ul>
-                                          <div class="tab-content" id="myTabContent">
-                                            <div class="tab-pane fade show active" id="bmi" role="tabpanel" aria-labelledby="bmi-tab">...</div>
-                                            <div class="tab-pane fade" id="ami" role="tabpanel" aria-labelledby="ami-tab">...</div>
-                                            <div class="tab-pane fade" id="bfi" role="tabpanel" aria-labelledby="bfi-tab">...</div>
-                                            <div class="tab-pane fade" id="afi" role="tabpanel" aria-labelledby="afi-tab">...</div>
-                                          </div>
-                                    </div>
 
-                                    <div class="card-body">
-                                        <div class="table-responsive" width="100%">
-                                            <table class="table table-hover" id="dataTable" cellspacing="0">
-                                                <thead>
-                                                    <tr class="font-weight-bold">
-                                                        <th>S/N</th>
-                                                        <th>Plan</th>
-                                                        <th class="text-right">Investment</th>
-                                                        <th class="text-right">Monthly ROI</th>
-                                                        <th class="text-right">Total ROI</th>
-                                                        <th class="text-right">Total Capital and ROI</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>1</td>
-                                                        <td>Silver</td>
-                                                        <td class="text-right">1,000,000</td>
-                                                        <td class="text-right">40,000</td>
-                                                        <td class="text-right">240,000</td>
-                                                        <td class="text-right">1,240,000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Silver</td>
-                                                        <td class="text-right">1,500,000</td>
-                                                        <td class="text-right">60,000</td>
-                                                        <td class="text-right">360,000</td>
-                                                        <td class="text-right">1,240,000</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-                                                <thead>
-                                                    <tr class="font-weight-bold">
-                                                        <th>S/N</th>
-                                                        <th>Plan</th>
-                                                        <th class="text-right">Investment</th>
-                                                        <th class="text-right">Monthly ROI</th>
-                                                        <th class="text-right">Total ROI</th>
-                                                        <th class="text-right">Total Capital and ROI</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>1</td>
-                                                        <td>Gold</td>
-                                                        <td class="text-right">2,000,000</td>
-                                                        <td class="text-right">90,000</td>
-                                                        <td class="text-right">540,000</td>
-                                                        <td class="text-right">2,540,000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Gold</td>
-                                                        <td class="text-right">2,500,000</td>
-                                                        <td class="text-right">112,000</td>
-                                                        <td class="text-right">675,000</td>
-                                                        <td class="text-right">3,175,000</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-                                                <thead>
-                                                    <tr class="font-weight-bold">
-                                                        <th>S/N</th>
-                                                        <th>Plan</th>
-                                                        <th class="text-right">Investment</th>
-                                                        <th class="text-right">Monthly ROI</th>
-                                                        <th class="text-right">Total ROI</th>
-                                                        <th class="text-right">Total Capital and ROI</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>1</td>
-                                                        <td>Diamond</td>
-                                                        <td class="text-right">3,000,000</td>
-                                                        <td class="text-right">150,000</td>
-                                                        <td class="text-right">900,000</td>
-                                                        <td class="text-right">3,900,000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Diamond</td>
-                                                        <td class="text-right">3,000,000</td>
-                                                        <td class="text-right">150,000</td>
-                                                        <td class="text-right">900,000</td>
-                                                        <td class="text-right">4,550,000</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-                                                <thead>
-                                                    <tr class="font-weight-bold">
-                                                        <th>S/N</th>
-                                                        <th>Plan</th>
-                                                        <th class="text-right">Investment</th>
-                                                        <th class="text-right">Monthly ROI</th>
-                                                        <th class="text-right">Total ROI</th>
-                                                        <th class="text-right">Total Capital and ROI</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="">
-                                                        <td>1</td>
-                                                        <td>Silver</td>
-                                                        <td class="text-right">4,000,000</td>
-                                                        <td class="text-right">220,000</td>
-                                                        <td class="text-right">1,320,000</td>
-                                                        <td class="text-right">5,320,000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>Silver</td>
-                                                        <td class="text-right">
-                                                            <input type="text" name="" id="">
-                                                        </td>
-                                                        <td class="text-right">0</td>
-                                                        <td class="text-right">0</td>
-                                                        <td class="text-right">0</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+
+
+
+                    <div class="col-lg-12">
+
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Select upgrade package</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-body" id="upgradePack">
+                                    <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="bmi-tab" data-toggle="tab" href="#bmi"
+                                                role="tab" aria-controls="bmi" aria-selected="true">BMI</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="ami-tab" data-toggle="tab" href="#ami" role="tab"
+                                                aria-controls="ami" aria-selected="false">AMI</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="bfi-tab" data-toggle="tab" href="#bfi" role="tab"
+                                                aria-controls="bfi" aria-selected="false">BFI</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="afi-tab" data-toggle="tab" href="#afi" role="tab"
+                                                aria-controls="afi" aria-selected="false">AFI</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane col-12 fade show active" id="bmi" role="tabpanel"
+                                            aria-labelledby="bmi-tab">
+                                            <div class="row mt-4">
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                BRONZE</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 100,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 21% Bi-annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">3.5% return on investment
+                                                                        is paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six months
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                SILVER</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 1,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 24% Bi-annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">5% return on investment is
+                                                                        paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six months
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                GOLD</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 2,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 27% Bi-annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">4.5% return on investment
+                                                                        is paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six months
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                DIAMOND</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 3,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 30% Bi-annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">5% return on investment is
+                                                                        paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six months
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                PLATINUM</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 4,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 33% Bi-annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">5.5% return on investment
+                                                                        is paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six months
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane col-12 fade" id="ami" role="tabpanel"
+                                            aria-labelledby="ami-tab">
+                                            <div class="row mt-4">
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                BRONZE</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 100,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 60% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">5% return on investment is
+                                                                        paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                SILVER</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 1,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 66% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">5.5% return on investment
+                                                                        is paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                GOLD</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 2,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 72% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">6% return on investment is
+                                                                        paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                DIAMOND</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 3,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 78% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">6.5% return on investment
+                                                                        is paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                PLATINUM</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 4,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 84% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">7% return on investment is
+                                                                        paid monthly</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane col-12 fade" id="bfi" role="tabpanel"
+                                            aria-labelledby="bfi-tab">
+                                            <div class="row mt-4">
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                BRONZE</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 100,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 33% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six month
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                SILVER</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 1,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 36% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six month
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                GOLD</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 2,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 39% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six month
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                DIAMOND</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 3,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 42% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six month
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                PLATINUM</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 4,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 45% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for six month
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane col-12 fade" id="afi" role="tabpanel"
+                                            aria-labelledby="afi-tab">
+                                            <div class="row mt-4">
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                BRONZE</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 100,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 72% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                SILVER</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 1,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 78% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                GOLD</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 2,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 84% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                DIAMOND</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 3,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 90% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <div class="package col-xl-3 col-md-6 mb-4">
+                                                    <div class="card shadow h-100 pb-1">
+                                                        <div class="card-body" id="plan">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col mr-2">
+                                                                    <div class="row no-gutters align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div
+                                                                                class="h4 mb-0 mr-3 font-weight-bold text-800">
+                                                                                PLATINUM</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="text-s mb-1">Minimum 4,000,000 NGN
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Total return on investment
+                                                                        as much as 96% annually.</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">One-off payment of capital
+                                                                        and return on investment</div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract for one year
+                                                                    </div>
+                                                                </div>
+                                                                <div class="div col-2">
+                                                                    <i class="text-xs fas fa-fw fa-check"></i>
+                                                                </div>
+                                                                <div class="div col-10">
+                                                                    <div class="text-xs mb-1">Contract can be repudiated
+                                                                        at any point subject to agree the terms and
+                                                                        conditions</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="nav-link collapsed" href="#">
+                                                            <i class="fas fa-fw fa-plus"></i>
+                                                            <span>SELECT</span>
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                   
-                                    <div class="buttons">
-                                        <a href="#" class="btn btn-primary btn-icon-split back">
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="table-responsive" width="100%" id="allBmi">
+                                        <table class="table table-hover b-bmi" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="bron1">
+                                                    <td>1</td>
+                                                    <td class="name">Bronze BMI</td>
+                                                    <td class="text-right invest">100000</td>
+                                                    <td class="text-right mroi">3500</td>
+                                                    <td class="text-right troi">21000</td>
+                                                    <td class="text-right tcroi">121000</td>
+                                                </tr>
+                                                <tr id="bron2">
+                                                    <td>2</td>
+                                                    <td class="name">Bronze BMI</td>
+                                                    <td class="text-right invest">300000</td>
+                                                    <td class="text-right mroi">10500</td>
+                                                    <td class="text-right troi">60300</td>
+                                                    <td class="text-right tcroi">363000</td>
+                                                </tr>
+                                                <tr id="bron3">
+                                                    <td>3</td>
+                                                    <td class="name">Bronze BMI</td>
+                                                    <td class="text-right invest">500000</td>
+                                                    <td class="text-right mroi">17500</td>
+                                                    <td class="text-right troi">105000</td>
+                                                    <td class="text-right tcroi">605000</td>
+                                                </tr>
+                                                <tr id="bron4">
+                                                    <td>4</td>
+                                                    <td class="name">Bronze BMI</td>
+                                                    <td class="text-right invest">700000</td>
+                                                    <td class="text-right mroi">24500</td>
+                                                    <td class="text-right troi">147000</td>
+                                                    <td class="text-right tcroi">847000</td>
+                                                </tr>
+                                                <tr id="bron5">
+                                                    <td>5</td>
+                                                    <td class="name">Bronze BMI</td>
+                                                    <td class="text-right invest">900000</td>
+                                                    <td class="text-right mroi">31500</td>
+                                                    <td class="text-right troi">189000</td>
+                                                    <td class="text-right tcroi">1089000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover s-bmi" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="silver1">
+                                                    <td>1</td>
+                                                    <td class="name">Silver BMI</td>
+                                                    <td class="text-right invest">1000000</td>
+                                                    <td class="text-right mroi">40000</td>
+                                                    <td class="text-right troi">240000</td>
+                                                    <td class="text-right tcroi">1240000</td>
+                                                </tr>
+                                                <tr id="silver2">
+                                                    <td>2</td>
+                                                    <td class="name">Silver BMI</td>
+                                                    <td class="text-right invest">1500000</td>
+                                                    <td class="text-right mroi">60000</td>
+                                                    <td class="text-right troi">360000</td>
+                                                    <td class="text-right tcroi">1240000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover g-bmi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="gold1">
+                                                    <td>1</td>
+                                                    <td class="name">Gold BMI</td>
+                                                    <td class="text-right invest">2000000</td>
+                                                    <td class="text-right mroi">90000</td>
+                                                    <td class="text-right troi">540000</td>
+                                                    <td class="text-right tcroi">2540000</td>
+                                                </tr>
+                                                <tr id="gold2">
+                                                    <td>2</td>
+                                                    <td class="name">Gold BMI</td>
+                                                    <td class="text-right invest">2500000</td>
+                                                    <td class="text-right mroi">112000</td>
+                                                    <td class="text-right troi">675000</td>
+                                                    <td class="text-right tcroi">3175000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover d-bmi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="diamond1">
+                                                    <td>1</td>
+                                                    <td class="name">Diamond BMI</td>
+                                                    <td class="text-right invest">3000000</td>
+                                                    <td class="text-right mroi">150000</td>
+                                                    <td class="text-right troi">900000</td>
+                                                    <td class="text-right tcroi">3900000</td>
+                                                </tr>
+                                                <tr id="diamond2">
+                                                    <td>2</td>
+                                                    <td class="name">Diamond BMI</td>
+                                                    <td class="text-right invest">3500000</td>
+                                                    <td class="text-right mroi">175000</td>
+                                                    <td class="text-right troi">1050000</td>
+                                                    <td class="text-right tcroi">4550000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover p-bmi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="plat1">
+                                                    <td>1</td>
+                                                    <td class="name">Platinum BMI</td>
+                                                    <td class="text-right invest">4000000</td>
+                                                    <td class="text-right mroi">220000</td>
+                                                    <td class="text-right troi">1320000</td>
+                                                    <td class="text-right tcroi">5320000</td>
+                                                </tr>
+                                                <tr id="plat2">
+                                                    <td>2</td>
+                                                    <td class="name">Platinum BMI</td>
+                                                    <td class="text-right invest">
+                                                        <input type="text" name="">
+                                                    </td>
+                                                    <td class="text-right mroi">0</td>
+                                                    <td class="text-right troi">0</td>
+                                                    <td class="text-right tcroi">0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive" width="100%" id="allAmi">
+                                        <table class="table table-hover b-ami" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="bron1">
+                                                    <td>1</td>
+                                                    <td class="name">Bronze AMI</td>
+                                                    <td class="text-right invest">100000</td>
+                                                    <td class="text-right mroi">5000</td>
+                                                    <td class="text-right troi">60000</td>
+                                                    <td class="text-right tcroi">160000</td>
+                                                </tr>
+                                                <tr id="bron2">
+                                                    <td>2</td>
+                                                    <td class="name">Bronze AMI</td>
+                                                    <td class="text-right invest">300000</td>
+                                                    <td class="text-right mroi">15000</td>
+                                                    <td class="text-right troi">180300</td>
+                                                    <td class="text-right tcroi">480000</td>
+                                                </tr>
+                                                <tr id="bron3">
+                                                    <td>3</td>
+                                                    <td class="name">Bronze AMI</td>
+                                                    <td class="text-right invest">500000</td>
+                                                    <td class="text-right mroi">25000</td>
+                                                    <td class="text-right troi">300000</td>
+                                                    <td class="text-right tcroi">800000</td>
+                                                </tr>
+                                                <tr id="bron4">
+                                                    <td>4</td>
+                                                    <td class="name">Bronze AMI</td>
+                                                    <td class="text-right invest">700000</td>
+                                                    <td class="text-right mroi">35000</td>
+                                                    <td class="text-right troi">420000</td>
+                                                    <td class="text-right tcroi">1120000</td>
+                                                </tr>
+                                                <tr id="bron5">
+                                                    <td>5</td>
+                                                    <td class="name">Bronze AMI</td>
+                                                    <td class="text-right invest">900000</td>
+                                                    <td class="text-right mroi">45000</td>
+                                                    <td class="text-right troi">540000</td>
+                                                    <td class="text-right tcroi">1440000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover s-ami" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="silver1">
+                                                    <td>1</td>
+                                                    <td class="name">Silver AMI</td>
+                                                    <td class="text-right invest">1000000</td>
+                                                    <td class="text-right mroi">55000</td>
+                                                    <td class="text-right troi">660000</td>
+                                                    <td class="text-right tcroi">1660000</td>
+                                                </tr>
+                                                <tr id="silver2">
+                                                    <td>2</td>
+                                                    <td class="name">Silver AMI</td>
+                                                    <td class="text-right invest">1500000</td>
+                                                    <td class="text-right mroi">82500</td>
+                                                    <td class="text-right troi">990000</td>
+                                                    <td class="text-right tcroi">2490000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover g-ami" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="gold1">
+                                                    <td>1</td>
+                                                    <td class="name">Gold AMI</td>
+                                                    <td class="text-right invest">2000000</td>
+                                                    <td class="text-right mroi">120000</td>
+                                                    <td class="text-right troi">1440000</td>
+                                                    <td class="text-right tcroi">3440000</td>
+                                                </tr>
+                                                <tr id="gold2">
+                                                    <td>2</td>
+                                                    <td class="name">Gold AMI</td>
+                                                    <td class="text-right invest">2500000</td>
+                                                    <td class="text-right mroi">150000</td>
+                                                    <td class="text-right troi">1800000</td>
+                                                    <td class="text-right tcroi">4300000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover d-ami" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="diamond1">
+                                                    <td>1</td>
+                                                    <td class="name">Diamond AMI</td>
+                                                    <td class="text-right invest">3000000</td>
+                                                    <td class="text-right mroi">195000</td>
+                                                    <td class="text-right troi">2340000</td>
+                                                    <td class="text-right tcroi">5340000</td>
+                                                </tr>
+                                                <tr id="diamond2">
+                                                    <td>2</td>
+                                                    <td class="name">Diamond AMI</td>
+                                                    <td class="text-right invest">3500000</td>
+                                                    <td class="text-right mroi">227500</td>
+                                                    <td class="text-right troi">2730000</td>
+                                                    <td class="text-right tcroi">6230000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover p-ami" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Monthly ROI</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="plat1">
+                                                    <td>1</td>
+                                                    <td class="name">Platinum AMI</td>
+                                                    <td class="text-right invest">4000000</td>
+                                                    <td class="text-right mroi">280000</td>
+                                                    <td class="text-right troi">3360000</td>
+                                                    <td class="text-right tcroi">7360000</td>
+                                                </tr>
+                                                <tr id="plat2">
+                                                    <td>2</td>
+                                                    <td class="name">Platinum AMI</td>
+                                                    <td class="text-right invest">
+                                                        <input type="text" name="">
+                                                    </td>
+                                                    <td class="text-right mroi">0</td>
+                                                    <td class="text-right troi">0</td>
+                                                    <td class="text-right tcroi">0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive" width="100%" id="allBfi">
+                                        <table class="table table-hover b-bfi" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="bron1">
+                                                    <td>1</td>
+                                                    <td class="name">Bronze BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">100000</td>
+                                                    <td class="text-right troi">33000</td>
+                                                    <td class="text-right tcroi">133000</td>
+                                                </tr>
+                                                <tr id="bron2">
+                                                    <td>2</td>
+                                                    <td class="name">Bronze BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">300000</td>
+                                                    <td class="text-right troi">99000</td>
+                                                    <td class="text-right tcroi">399000</td>
+                                                </tr>
+                                                <tr id="bron3">
+                                                    <td>3</td>
+                                                    <td class="name">Bronze BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">500000</td>
+                                                    <td class="text-right troi">165000</td>
+                                                    <td class="text-right tcroi">665000</td>
+                                                </tr>
+                                                <tr id="bron4">
+                                                    <td>4</td>
+                                                    <td class="name">Bronze BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">700000</td>
+                                                    <td class="text-right troi">231000</td>
+                                                    <td class="text-right tcroi">931000</td>
+                                                </tr>
+                                                <tr id="bron5">
+                                                    <td>5</td>
+                                                    <td class="name">Bronze BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">900000</td>
+                                                    <td class="text-right troi">297000</td>
+                                                    <td class="text-right tcroi">1197000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover s-bfi" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="silver1">
+                                                    <td>1</td>
+                                                    <td class="name">Silver BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">1000000</td>
+                                                    <td class="text-right troi">360000</td>
+                                                    <td class="text-right tcroi">1360000</td>
+                                                </tr>
+                                                <tr id="silver2">
+                                                    <td>2</td>
+                                                    <td class="name">Silver BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">1500000</td>
+                                                    <td class="text-right troi">540000</td>
+                                                    <td class="text-right tcroi">2040000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover g-bfi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="gold1">
+                                                    <td>1</td>
+                                                    <td class="name">Gold BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">2000000</td>
+                                                    <td class="text-right troi">780000</td>
+                                                    <td class="text-right tcroi">2780000</td>
+                                                </tr>
+                                                <tr id="gold2">
+                                                    <td>2</td>
+                                                    <td class="name">Gold BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">2500000</td>
+                                                    <td class="text-right troi">975000</td>
+                                                    <td class="text-right tcroi">3475000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover d-bfi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="diamond1">
+                                                    <td>1</td>
+                                                    <td class="name">Diamond BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">3000000</td>
+                                                    <td class="text-right troi">1260000</td>
+                                                    <td class="text-right tcroi">4260000</td>
+                                                </tr>
+                                                <tr id="diamond2">
+                                                    <td>2</td>
+                                                    <td class="name">Diamond BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">3000000</td>
+                                                    <td class="text-right troi">1470000</td>
+                                                    <td class="text-right tcroi">4970000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover p-bfi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="plat1">
+                                                    <td>1</td>
+                                                    <td class="name">Platinum BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">4000000</td>
+                                                    <td class="text-right troi">1800000</td>
+                                                    <td class="text-right tcroi">5800000</td>
+                                                </tr>
+                                                <tr id="plat2">
+                                                    <td>2</td>
+                                                    <td class="name">Platinum BFI</td>
+                                                    <td></td>
+                                                    <td class="text-right invest">
+                                                        <input type="text" name="">
+                                                    </td>
+                                                    <td class="text-right troi">0</td>
+                                                    <td class="text-right tcroi">0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive" width="100%" id="allAfi">
+                                        <table class="table table-hover b-afi" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr id="bron1">
+                                                    <td>1</td>
+                                                    <td class="name">Bronze AFI</td>
+                                                    <td class="text-right invest">100000</td>
+                                                    <td class="text-right troi">72000</td>
+                                                    <td class="text-right tcroi">172000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="bron2">
+                                                    <td>2</td>
+                                                    <td class="name">Bronze AFI</td>
+                                                    <td class="text-right invest">300000</td>
+                                                    <td class="text-right troi">216500</td>
+                                                    <td class="text-right tcroi">516000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="bron3">
+                                                    <td>3</td>
+                                                    <td class="name">Bronze AFI</td>
+                                                    <td class="text-right invest">500000</td>
+                                                    <td class="text-right troi">360000</td>
+                                                    <td class="text-right tcroi">860000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="bron4">
+                                                    <td>4</td>
+                                                    <td class="name">Bronze AFI</td>
+                                                    <td class="text-right invest">700000</td>
+                                                    <td class="text-right troi">504000</td>
+                                                    <td class="text-right tcroi">1204000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="bron5">
+                                                    <td>5</td>
+                                                    <td class="name">Bronze AFI</td>
+                                                    <td class="text-right invest">900000</td>
+                                                    <td class="text-right troi">648000</td>
+                                                    <td class="text-right tcroi">1548000</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover s-afi" id="dataTable" cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="silver1">
+                                                    <td>1</td>
+                                                    <td class="name">Silver AFI</td>
+                                                    <td class="text-right invest">1000000</td>
+                                                    <td class="text-right troi">780000</td>
+                                                    <td class="text-right tcroi">1780000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="silver2">
+                                                    <td>2</td>
+                                                    <td class="name">Silver AFI</td>
+                                                    <td class="text-right invest">1500000</td>
+                                                    <td class="text-right troi">1170000</td>
+                                                    <td class="text-right tcroi">2670000</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover g-afi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="gold1">
+                                                    <td>1</td>
+                                                    <td class="name">Gold AFI</td>
+                                                    <td class="text-right invest">2000000</td>
+                                                    <td class="text-right troi">1680000</td>
+                                                    <td class="text-right tcroi">3680000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="gold2">
+                                                    <td>2</td>
+                                                    <td class="name">Gold AFI</td>
+                                                    <td class="text-right invest">2500000</td>
+                                                    <td class="text-right troi">2100000</td>
+                                                    <td class="text-right tcroi">4600000</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover d-afi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="diamond1">
+                                                    <td>1</td>
+                                                    <td class="name">Diamond AFI</td>
+                                                    <td class="text-right invest">3000000</td>
+                                                    <td class="text-right troi">2700000</td>
+                                                    <td class="text-right tcroi">5700000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="diamond2">
+                                                    <td>2</td>
+                                                    <td class="name">Diamond AFI</td>
+                                                    <td class="text-right invest">3500000</td>
+                                                    <td class="text-right troi">3150000</td>
+                                                    <td class="text-right tcroi">6650000</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table class="table table-hover p-afi" id="dataTable" width="100%"
+                                            cellspacing="0">
+                                            <thead>
+                                                <tr class="font-weight-bold">
+                                                    <th>S/N</th>
+                                                    <th>Plan</th>
+                                                    <th class="text-right">Investment</th>
+                                                    <th class="text-right">Total ROI</th>
+                                                    <th class="text-right">Total Capital and ROI</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="" id="plat1">
+                                                    <td>1</td>
+                                                    <td class="name">Platinum AFI</td>
+                                                    <td class="text-right invest">4000000</td>
+                                                    <td class="text-right troi">3600000</td>
+                                                    <td class="text-right tcroi">7600000</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr id="plat2">
+                                                    <td>2</td>
+                                                    <td class="name">Platinum AFI</td>
+                                                    <td class="text-right invest">
+                                                        <input type="text" name="">
+                                                    </td>
+                                                    <td class="text-right troi">0</td>
+                                                    <td class="text-right tcroi">0</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-primary btn-icon-split back">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-arrow-left"></i>
                                         </span>
                                         <span class="text">Back</span>
                                     </a>
-                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#upgradeModal">
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
+                                        data-target="#upgradeModal">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-arrow-right"></i>
                                         </span>
                                         <span class="text">Next</span>
                                     </a>
-                                    </div>
-                                    
-                                    
                                 </div>
-                            </div>
 
+
+                            </div>
                         </div>
-                
-                    
-                    
+
+                    </div>
+
+                    <div class="col-lg-12 mb-4">
+
+
+                        <!-- Approach -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Please read our terms</h6>
+                            </div>
+                            <div class="card-body">
+                                <p>Our terms and conditions are design to enable us serve you without hitches and
+                                    give you the best value for your investment plan with us, as such we encourage
+                                    you to get familiar with them</p>
+                                <p class="mb-0">You can read our full <a href="/terms.html" target="_blank">terms and
+                                        conditions by clicking HERE</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -509,15 +2299,17 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span id="copy"> <script>
-                            var date = new Date();
-                            var curYear = date.getFullYear();
-                            document.getElementById("copy").innerHTML = curYear;
-                        </script> Copyright &copy; Diamond Crystal Investment</span>
+                        <span id="copy">
+                            <script>
+                                var date = new Date();
+                                var curYear = date.getFullYear();
+                                document.getElementById("copy").innerHTML = curYear;
+                            </script> Copyright &copy; Diamond Crystal Investment
+                        </span>
                     </div>
-<div class="credits text-center">
-        Designed by <a href="https://techpadi.com.ng/" target="_blank">Techpadi</a>
-      </div>
+                    <div class="credits text-center">
+                        Designed by <a href="https://techpadi.com.ng/" target="_blank">Techpadi</a>
+                    </div>
                 </div>
             </footer>
             <!-- End of Footer -->
@@ -533,7 +2325,7 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    
+
 
     <!-- Completing Process Modal -->
     <div class="modal fade" id="upgradeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -552,48 +2344,48 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                              <div class="col-12">
-                                <div class="form-group">
-                                  <label for="exampleInputEmail1">Next Of Kins Name </label>
-                                  <input type="text" class="form-control" id="nextOfKins">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Next Of Kins Name </label>
+                                        <input type="text" class="form-control" id="nextOfKins">
+                                    </div>
                                 </div>
-                              </div>
                             </div>
                             <div class="row">
-                              <div class="col-12">
-                                <div class="form-group">
-                                  <label>Relationship</label>
-                                  <input type="text" class="form-control" id="relationship">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Relationship</label>
+                                        <input type="text" class="form-control" id="relationship">
+                                    </div>
                                 </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-group">
-                                  <label>Address</label>
-                                  <input type="text" class="form-control" id="address">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" id="address">
+                                    </div>
                                 </div>
-                              </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-4 col-12">
-                                <div class="form-group">
-                                  <label>Bank Name</label>
-                                  <input type="text" class="form-control" id="ACbank">
+                                <div class="col-md-4 col-12">
+                                    <div class="form-group">
+                                        <label>Bank Name</label>
+                                        <input type="text" class="form-control" id="ACbank">
+                                    </div>
                                 </div>
-                              </div>
-                              <div class="col-md-4 col-12">
-                                <div class="form-group">
-                                  <label>Account Name</label>
-                                  <input type="text" class="form-control" id="ACname">
+                                <div class="col-md-4 col-12">
+                                    <div class="form-group">
+                                        <label>Account Name</label>
+                                        <input type="text" class="form-control" id="ACname">
+                                    </div>
                                 </div>
-                              </div>
-                              <div class="col-md-4 col-12">
-                                <div class="form-group">
-                                  <label>Account Number</label>
-                                  <input type="text" class="form-control" id="ACnumber">
+                                <div class="col-md-4 col-12">
+                                    <div class="form-group">
+                                        <label>Account Number</label>
+                                        <input type="text" class="form-control" id="ACnumber">
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                    <button class="btn btn-primary" type="submit">Continue</button>
+                            <button class="btn btn-primary" type="submit">Continue</button>
                         </form>
                     </div>
                 </div>
@@ -604,16 +2396,16 @@
         </div>
     </div>
 
-     <!-- Bootstrap core JavaScript-->
-     <script src="vendor/jquery/jquery.min.js"></script>
-     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- 
-     <!-- Core plugin JavaScript-->
-     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
- 
-     <!-- Custom scripts for all pages-->
-     <script src="js/admin.js"></script>
- <script src="js/main.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
     <script src="js/upgrade.js"></script>

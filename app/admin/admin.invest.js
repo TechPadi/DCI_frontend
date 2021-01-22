@@ -21,7 +21,7 @@ function getPending(){
         let place =[]
         for (let i = 0; i < usersAwaitingAproval.length; i++) {
             const data = usersAwaitingAproval;
-            place.push(`<tr class="" id='returnedtr'  >
+            place.push(JSON.stringify(`<tr class="" id='returnedtr'  >
                     <td>${i+1}</td>
                     <td>${data[i].fullname}</td>
                     <td>${data[i].planDetails.dataName}</td>
@@ -46,7 +46,7 @@ function getPending(){
                             More <i class="fas fa-fw fa-ellipsis-h"></i>
                         </a>
                     </td>
-                </tr>`)
+                </tr>`))
         }
 holder.innerHTML=place
       })
