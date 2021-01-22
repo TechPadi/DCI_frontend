@@ -110,8 +110,6 @@ if (personalForm) {
   personalForm.addEventListener('submit', e => {
       e.preventDefault();
 
-      verifyCheckbox()
-
       const fullname = _("#fName").value;
       const phonenumber = _("#pNumber").value;
       const occupation = _("#occupation").value;
