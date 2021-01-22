@@ -14,12 +14,12 @@ function _(str) {
   const personalForm = _("#personalForm");
   const verifydForm = _("#verifydForm");
   const loginForm = _("#loginForm");
-//   const progressCircle = Array.from(document.querySelectorAll('.circle'));
+  // const progressCircle = Array.from(document.querySelectorAll('.circle'));
 
 const checkPassword = () => {
   if (_("#rPwd").value == _("#rCPwd").value) {
     _(".feedback").style.color = "green";
-    _(".feedback").innerHTML = `password is correct`;
+    _(".feedback").innerHTML = `password is a match`;
     _("#firstRegBtn").removeAttribute("disabled");
     // register api call
   if (regForm) {
@@ -72,7 +72,7 @@ const checkPassword = () => {
                 
               personalForm.classList.add('show');
                 
-              progressCircle[0].classList.add('done2');
+              progressCircle[1].classList.add('done2');
             })
             .catch ( error => {
               if(error.response.status===500){
@@ -98,63 +98,60 @@ const checkPassword = () => {
     }
   } else {
     _(".feedback").style.color = "red";
-    _(".feedback").innerHTML = `password is not correct`;
+    _(".feedback").innerHTML = `passwords don't match`;
     _("#firstRegBtn").setAttribute("disabled", true);
   }
 } 
 
-  // check if terms and conditions was checked
-  if (_("#checkTerms").checked) {
-    _("#secondRegBtn").removeAttribute("disabled");
-    // personal info api call
-  if (personalForm) {
+ 
+
+if (personalForm) {
+
+  personalForm.addEventListener('submit', e => {
+      e.preventDefault();
+
+      verifyCheckbox()
+
+      const fullname = _("#fName").value;
+      const phonenumber = _("#pNumber").value;
+      const occupation = _("#occupation").value;
+      const gender = _("#gender").value;
+
+      console.log(fullname, phonenumber, occupation, gender);
+
+      axios.put(`api/v1/user/register/personal/${localStorage.getItem('userid')}`, {
+          fullname: fullname,
+          phonenumber: phonenumber,
+          occupation:occupation,
+          gender:gender
+        })
+        .then ( response => {
+
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'please input the verification code sent to your email address (or spam folder)',
+            showConfirmButton: false,
+            timer: 5000
+          })
+          setTimeout(() => {
+            
+            location.replace("/app/verify.html")
+          }, 5000);
+        })
+        .catch ( error => {
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: `${error.data.message}`,
+            showConfirmButton: false,
+            timer: 5000
+          })
+        });
+
+  })
   
-    personalForm.addEventListener('submit', e => {
-        e.preventDefault();
-
-        const fullname = _("#fName").value;
-        const phonenumber = _("#pNumber").value;
-        const occupation = _("#occupation").value;
-        const gender = _("#gender").value;
-
-        console.log(fullname, phonenumber, occupation, gender);
-
-        axios.put(`api/v1/user/register/personal/${localStorage.getItem('userid')}`, {
-            fullname: fullname,
-            phonenumber: phonenumber,
-            occupation:occupation,
-            gender:gender
-          })
-          .then ( response => {
-
-            Swal.fire({
-              position: 'center',
-              icon: 'success',
-              title: 'please input the verification code sent to your email address (or spam folder)',
-              showConfirmButton: false,
-              timer: 5000
-            })
-            setTimeout(() => {
-              
-              location.replace("/app/verify.html")
-            }, 5000);
-          })
-          .catch ( error => {
-            Swal.fire({
-              position: 'center',
-              icon: 'error',
-              title: `${error.data.message}`,
-              showConfirmButton: false,
-              timer: 5000
-            })
-          });
-
-    })
-    
 }
-  } else {
-    _("#secondRegBtn").setAttribute("disabled", true);
-  }
   
   
   
