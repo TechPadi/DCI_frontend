@@ -11250,6 +11250,20 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+
+
+/* @media (min-width: 0px) {
+  
+} */
+.card-body.category {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.table tbody tr {
+  cursor: pointer;
+}
+.table tbody tr:active,
 .tr-active {
   color: #858796 !important;
   background-color: rgba(0, 0, 0, 0.075) !important;
@@ -11306,3 +11320,4 @@ form.user .verification .form-control-user {
   border-radius: 5rem;
   padding: 1.5rem 1rem;
 }
+

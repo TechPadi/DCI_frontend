@@ -1900,6 +1900,10 @@ section {
   font-size: 13px;
   color: #fff;
 }
+.category {
+  height: 50px;
+  overflow-y: scroll;
+}
 
 @media (max-width: 575px) {
   #footer .footer-top .footer-info {

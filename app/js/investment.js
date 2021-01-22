@@ -107,7 +107,7 @@ const packages = [
         console.log(tr);
         tr.classList.toggle("tr-active");
   
-        Array.from(event.target.parentElement.children)
+        Array.from(tr.children)
           .forEach(item => {
   
             let x = item;
