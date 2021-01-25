@@ -47,8 +47,10 @@ function _(str) {
         const email = response.data.user.email;
         localStorage.setItem('useremail', email);
 
-        const save_balance = response.data.user.savingBalance        ;
+        const save_balance = response.data.user.savingBalance;
         localStorage.setItem('save_balance', save_balance);
+
+        
         // console.log(fullname, token, id);
   console.log(response)
         if(!response.data.user.verified) {
@@ -70,7 +72,7 @@ function _(str) {
             timer: 5000
           })
   
-          // location.replace("/app/dashboard.html");
+          location.replace("/app/dashboard.html");
         }else{
           Swal.fire({
             position: 'center',
@@ -80,7 +82,10 @@ function _(str) {
             timer: 5000
           })
   
-          location.replace("/app/update1.html");
+          setTimeout(() => {
+          
+            location.replace("/app/update1.html");
+          }, 5000);
   
         }
   
@@ -96,7 +101,10 @@ function _(str) {
             showConfirmButton: false,
             timer: 5000
           })
-          location.replace("/app/register.html");
+          setTimeout(() => {
+          
+            location.replace("/app/register.html");
+          }, 5000);
         } else if(error.message === 'Request failed with status code 403') {
           Swal.fire({
             position: 'center',

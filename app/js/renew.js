@@ -8,7 +8,7 @@ axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
 const renewInvest = _("#renewInvest");
 
 renewInvest.innerHTML = `You invested <code>${localStorage.getItem('dataPrice')}</code> 
-<br>For <code>${localStorage.getItem('dataName')} Biannual Monthly Investment</code> 
+<br>For <code>${localStorage.getItem('dataName')}</code> 
 <br>Proceed with package renewal below, make sure to read the terms of downgrade.`;
 
 // const userProfile = _("#userProfile");

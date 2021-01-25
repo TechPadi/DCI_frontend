@@ -106,7 +106,7 @@ let loans = Array.from(document.querySelectorAll('.loans'));
 
   var loadFile = function(event) {
     var image = document.getElementById('output2');
-    let ggg = 
+    let ggg;
     let galleryImg = `<p><img id="output2" width="200" /></p>`;
     image.src = URL.createObjectURL(event.target.files[0]);
 

@@ -11255,13 +11255,13 @@ body.sidebar-toggled footer.sticky-footer {
 /* @media (min-width: 0px) {
   
 } */
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 .card-body.category {
   height: 200px;
   overflow-y: scroll;
 }
-=======
->>>>>>> e78b243a6cb23f9714154ee348c763c9423312de
+/* ======= */
+/* >>>>>>> e78b243a6cb23f9714154ee348c763c9423312de */
 
 .table tbody tr {
   cursor: pointer;
@@ -11314,7 +11314,7 @@ body.sidebar-toggled footer.sticky-footer {
 .loans, .loanss, .buttons, .table  {
   display: none;
 }
-.form-control[input[type="file" i] {
+.form-control input[type="file" i] {
   height: 100px;
   width: 100px;
 }

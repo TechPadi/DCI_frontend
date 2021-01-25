@@ -81,6 +81,19 @@ const docForm = _("#docForm");
 const investLoan = _("#investLoan");
 let index = 0;
 
+const checkInvestorLoanAmount = () => {
+  if( _("#invAmt").value > localStorage.getItem('dataPrice')) {
+    console.log( _("#invAmt").value);
+    Swal.fire({
+      position: 'center',
+      icon: 'error',
+      title: `The loan amount should not be more than the amount used for investment`,
+      showConfirmButton: false,
+      timer: 4000
+    })
+  }
+}
+
 const checkID = (id) => {
   if (id === 't4') {
 
@@ -104,8 +117,8 @@ const checkID = (id) => {
         }
     
         let body = {
-          Lamount: _("#Lamount").value,
-          Luse: _("#Luse").value,
+          Lamount: _("#invAmt").value,
+          Luse: _("#invPup").value,
           Lemployer: _("#Lemployer").value,
           Lincome: _("#Lincome").value,
           id: `${localStorage.getItem('userid')}`,

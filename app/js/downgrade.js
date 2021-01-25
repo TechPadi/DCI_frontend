@@ -9,7 +9,7 @@ const renewInvest = _("#renewInvest");
 
 renewInvest.innerHTML = `You invested <code>${localStorage.getItem('dataPrice')}</code> 
 <br>For <code>${localStorage.getItem('dataName')}</code> 
-<br>Proceed with package renewal below, make sure to read the terms of upgrade.`;
+<br>Proceed with package renewal below, make sure to read the terms of downgrade.`;
 
 // const userProfile = _("#userProfile");
 
@@ -141,7 +141,7 @@ packagesLink.forEach(packageLink => {
                 // console.log(tdInvest[0]);
                 tableTd = tdInvest[0];
                 // console.log(tableTd);
-                if(tableTd.innerHTML > parseInt(localStorage.getItem('dataPrice'))) {
+                if(tableTd.innerHTML < parseInt(localStorage.getItem('dataPrice'))) {
                 // if(tableTd.innerHTML > 300000) {
                     // tableTd.classList=[]
                     // console.log(table);

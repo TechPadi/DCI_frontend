@@ -311,12 +311,9 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>You invested <code>1,000,000</code> 
-                                        <br>For <code>Biannual Monthly Investment</code> 
-                                        <br> Package active till <code>05/03/2021</code> 
-                                        <br>Proceed with package termination below, make sure to read the terms of downgrade.</p>
+                                    <p id="renewInvest"></p>
                                     <br>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="#" class="btn btn-primary btn-icon-split" id="terminateBtn">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-flag"></i>
                                         </span>
@@ -328,7 +325,23 @@
 
                         </div>
                 
-                
+                        <div class="col-lg-12 mb-4">
+
+
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Please read our terms</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Our terms and conditions are design to enable us serve you without hitches and
+                                        give you the best value for your investment plan with us, as such we encourage
+                                        you to get familiar with them</p>
+                                        <p class="mb-0">You can read our full <a href="/terms.html" target="_blank">terms and conditions by clicking HERE</a></p>
+                                </div>
+                            </div>
+
+                        </div>
                 
                 
                 
@@ -373,13 +386,13 @@
      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
  
      <!-- Custom scripts for all pages-->
-     <script src="js/admin.js"></script>
- <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/logout.js"></script>
     <script src="js/terminate.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/logout.js"></script>
 
 </body>
 

@@ -3,42 +3,44 @@
 // function for grabbing ids
 function _(str) {
     return document.querySelector(str);
-  }
+}
   
   
-  // Set base url using axios global defaults
-  axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
+// Set base url using axios global defaults
+axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
   
-  const update1 = _("#update1");
-  const update2 = _("#update2");
-  const update3 = _("#update3");
+const update1 = _("#update1");
+const update2 = _("#update2");
+const update3 = _("#update3");
 
+let [sti, roi, invAm, actLon, mReb, userProfile, roiCoi] = [_("#sti"), _("#roi"), _("#invAm"), _("#actLon"), _("#mReb"), _("#userProfile"), _("#roiCoi")];
+// console.log(sti, roi, invAm, actLon, mReb, userProfile, roiCoi);
+// sti.innerHTML = `hello world`;
   
-  const fullName = _("#fullName");
-  if(fullName) {
-  
+const fullName = _("#fullName");
+if(fullName) {
+
     fullName.innerHTML = `
     <h1 class="h3 mb-0 text-gray-800">Welcome, </h1><span class="span-align">Please Update Your Account To Select A Future To Start</span>
     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
             class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
     `
+
+}
   
-  }
-  
-  const userName = _("#userName");
-  if(userName) {
+const userName = _("#userName");
+if(userName) {
     userName.innerHTML = `
     <h1 class="h3 mb-0 text-gray-800">Welcome, ${localStorage.getItem('name')} </h1>
     `
-  }
+}
   
   
   
-  // Dashboard api call
-  let [sti, roi, invAm, actLon, mReb, userProfile, roiCoi] = [_("#sti"), _("#roi"), _("#invAm"), _("#actLon"), _("#mReb"), _("#userProfile"), _("#roiCoi")];
+// Dashboard api call
   // console.log(sti, roi)
-  window.onload = async () => {
-    console.log('page is fully loaded');
+window.onload = async () => {
+    // console.log('page is fully loaded');
     try{
       const response = await axios({
         method: 'post',
@@ -47,13 +49,25 @@ function _(str) {
           Authorization: `Bearer ${localStorage.getItem('usertoken')}`
         }
       });
-      
+    //   console.log('page is fully loaded');
+      console.log(response);
 
-      const img = `${(!response.data.user.image)?"img/undraw_profile.svg":response.data.user.image.path}`;
+      localStorage.setItem("dataPrice", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.dataPrice):0}`);
+        localStorage.setItem("dataName", `${(response.data.user.planDetails)?response.data.user.planDetails.dataName:"---"}`);
+        localStorage.setItem("accNum", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.ACnumber):0}`);
+        localStorage.setItem("accName", `${(response.data.user.planDetails)?response.data.user.planDetails.ACname:"---"}`);
+        localStorage.setItem("accBank", `${(response.data.user.planDetails)?response.data.user.planDetails.ACbank:"---"}`);
+        localStorage.setItem("nextOfKins", `${(response.data.user.planDetails)?response.data.user.planDetails.nextOfKins:"---"}`);
+        localStorage.setItem("relationship", `${(response.data.user.planDetails)?response.data.user.planDetails.relationship:"---"}`);
+        localStorage.setItem("address", `${(response.data.user.planDetails)?response.data.user.planDetails.address:"---"}`);
+        localStorage.setItem("phone", `${(response.data.user.planDetails)?response.data.user.planDetails.phone:0}`);
+        localStorage.setItem("MonthlyROI", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.MonthlyROI):0}`);
+        localStorage.setItem("TotalROI", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.TotalROI):0}`);
+        localStorage.setItem("TotalReturn", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.TotalReturn):0}`);
+        localStorage.setItem("investmentCount", `${response.data.user.investmentCount}`);
 
-      localStorage.setItem('userAvatar', img);
-
-      roiCoi.innerHTML = `<div class="row no-gutters align-items-center">
+        
+      roiCoi.innerHTML += `<div class="row no-gutters align-items-center">
       <a href="#">
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
@@ -61,7 +75,7 @@ function _(str) {
               </div>
               <div class="row no-gutters align-items-center">
                   <div class="col-auto">
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">₦${(response.data.user.planDetails.TotalReturn)?response.data.user.planDetails.TotalReturn:0}
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">₦${localStorage.getItem('TotalReturn')}
                       </div>
                   </div>
               </div>
@@ -104,7 +118,7 @@ function _(str) {
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                   ROI </div>
-  <div class="h5 mb-0 font-weight-bold text-gray-800">₦${Number(response.data.user.investmentReturnsBalance)}</div>
+  <div class="h5 mb-0 font-weight-bold text-gray-800">₦${localStorage.getItem('TotalROI')}</div>
           </div>
       </a>
       <div class="col-auto">
@@ -119,7 +133,7 @@ function _(str) {
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                   Invested Amount</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">₦${0}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">₦${localStorage.getItem('dataPrice')}</div>
           </div>
       </a>
       <div class="col-auto">
@@ -162,11 +176,16 @@ function _(str) {
   </div>
       `;
   
+      const img = `${(!response.data.user.image)?"img/undraw_profile.svg":response.data.user.image.path}`;
+      localStorage.setItem('userAvatar', img);
+
+      console.log(response.data.user.investmentCount > 0);
   
+      
   
     } catch (error) {
   
-      ;
+      
       
   
       if(error.message === "Request failed with status code 403") {

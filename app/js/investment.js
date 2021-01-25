@@ -96,6 +96,8 @@ const packages = [
   console.log(packages);
   
   const investForm = _("#investForm");
+  const investPacks = _("#investPacks");
+  console.log(investPacks);
   const tables = document.querySelectorAll('table');
   if (tables) {
     tables.forEach(table => {
@@ -149,18 +151,9 @@ const packages = [
             axios.put(`api/v1/plans/${localStorage.getItem('userid')}/pickedplan`, body)
             .then(response => {
   
-              localStorage.setItem("dataPrice", response.data.user.planDetails.dataPrice);
-              localStorage.setItem("dataName", response.data.user.planDetails.dataName);
-              localStorage.setItem("accNum", response.data.user.planDetails.ACnumber);
-              localStorage.setItem("accName", response.data.user.planDetails.ACname);
-              localStorage.setItem("accBank", response.data.user.planDetails.ACbank);
-              localStorage.setItem("nextOfKins", response.data.user.planDetails.nextOfKins);
-              localStorage.setItem("relationship", response.data.user.planDetails.relationship);
-              localStorage.setItem("address", response.data.user.planDetails.address);
-              localStorage.setItem("phone", response.data.user.planDetails.phone);
-              localStorage.setItem("MonthlyROI", response.data.user.planDetails.MonthlyROI);
-              localStorage.setItem("TotalROI", response.data.user.planDetails.TotalROI);
-              localStorage.setItem("TotalReturn", response.data.user.planDetails.TotalReturn);
+              console.log(response);
+
+              
   
               Swal.fire({
                 position: 'center',
@@ -173,7 +166,7 @@ const packages = [
               location.replace('/app/payment.html')
             })
             .catch(error => {
-              
+              console.log(error.message);
               Swal.fire({
                 position: 'center',
                 icon: 'error',
@@ -186,4 +179,19 @@ const packages = [
         }
       });
     });
+}
+
+const investStats = _("#investStats");
+
+investStats.innerHTML += `<p>Package Name:  <code>${localStorage.getItem('dataName')}</code> 
+<br>Amount: <code>${localStorage.getItem('dataPrice')}</code>
+</p>`;
+
+userProfile.innerHTML = `
+      <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
+      <img class="img-profile rounded-circle" src=${localStorage.getItem('userAvatar')}>
+      `;
+
+if (localStorage.getItem('investmentCount') > 0) {
+  investPacks.style.display = "none";
 }

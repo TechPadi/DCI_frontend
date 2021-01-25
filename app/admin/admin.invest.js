@@ -21,32 +21,32 @@ function getPending(){
         let place =[]
         for (let i = 0; i < usersAwaitingAproval.length; i++) {
             const data = usersAwaitingAproval;
-            place.push(JSON.stringify(`<tr class="" id='returnedtr'  >
-                    <td>${i+1}</td>
-                    <td>${data[i].fullname}</td>
-                    <td>${data[i].planDetails.dataName}</td>
-                    <td class="text-right">${data[i].planDetails.dataPrice}</td>
-                    <td>${data[i].accesscode}</td>
-                    <td class="text-center">Pending</td>
-                    <td class="text-center">
-                        <button class="btn text-link text-danger" title="Decline">
-                            <i class="fas fa-fw fa-times"></i>
-                        </button>
-                        <button 
-                        id="accq" 
-                        class="btn text-link text-success pl-1" 
-                        title="Approve"
-                        onclick="recieveData(${data[i].accesscode})"
-                        >
-                            <i class="fas fa-fw fa-check"></i>
-                        </button>
-                    </td>
-                    <td class="text-center">
-                        <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#investmentModal">
-                            More <i class="fas fa-fw fa-ellipsis-h"></i>
-                        </a>
-                    </td>
-                </tr>`))
+            place.push(`<tr class="" id='returnedtr'  >
+            <td>${i+1}</td>
+            <td>${data[i].fullname}</td>
+            <td>${data[i].planDetails.dataName}</td>
+            <td class="text-right">${data[i].planDetails.dataPrice}</td>
+            <td>${data[i].accesscode}</td>
+            <td class="text-center">Pending</td>
+            <td class="text-center">
+                <button class="btn text-link text-danger" title="Decline">
+                    <i class="fas fa-fw fa-times"></i>
+                </button>
+                <button 
+                id="accq" 
+                class="btn text-link text-success pl-1" 
+                title="Approve"
+                onclick="recieveData(${data[i].accesscode})"
+                >
+                    <i class="fas fa-fw fa-check"></i>
+                </button>
+            </td>
+            <td class="text-center">
+                <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#investmentModal">
+                    More <i class="fas fa-fw fa-ellipsis-h"></i>
+                </a>
+            </td>
+        </tr>`)
         }
 holder.innerHTML=place
       })
@@ -81,7 +81,8 @@ function recieveData(data) {
         emaiil:UserEmail
     }
     const action = `Verified investment of ${actualuser.fullname}`
-    const dataBody ={user,admin,id,action}
+    const dataBody ={user,admin,id:admin._id,action}
+    console.log(dataBody)
 
     
     axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/user/verifyinvestor/investment/${id}`,dataBody)
