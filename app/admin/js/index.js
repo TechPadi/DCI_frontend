@@ -5,8 +5,25 @@ function _(str) {
 const year =new Date().getFullYear()
 document.getElementById('year').innerHTML=year
 const  id =localStorage.getItem('id')
+const adminLogs =document.getElementById('adminLogs')
 axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/dashboard/${id}`)
 .then(res=>{
+    const logs = res.data.user.activityLogs
+    console.log(logs)
+    const place =[]
+    for (let index = 0; index < logs.length; index++) {
+        const element = logs[index];
+        console.log(element)
+        place.push(` <tr>
+        <td>${element.type}</td>
+        <td>${element.user.fullname}</td>
+        <td>${element.user.emaiil}</td>
+        <td>${element.action}</td>
+        <td>${element.date.split("T")[0]}</td>
+    </tr>`)
+    
+}
+adminLogs.innerHTML=place
     const {fullname,email,phonenumber,residentialAddress,nearestBusStop,town,State,country,DateOfBirth,idType,idNumber} =res.data.user
     document.getElementById('AdminName').innerHTML=fullname
 })

@@ -93,7 +93,7 @@ function recieveData(data) {
     }
     const action = `Verified Save To Invest of ${actualuser.fullname}`
     const amount = parseInt(actualuser.savingDets.amount)
-    const dataBody ={user,admin,id,action,amount}
+    const dataBody ={user,admin,id,action,amount,date:new Date(),type:"STI"}
     console.log(dataBody)
     axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/user/verifyaddtosti/save/${actualuser._id}`,dataBody)
     .then(res=>{

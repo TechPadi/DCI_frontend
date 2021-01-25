@@ -4,6 +4,10 @@
 function _(str) {
     return document.querySelector(str);
 }
+
+function currencyFormat(num) {
+    return `₦${num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}`
+}
   
   
 // Set base url using axios global defaults
@@ -64,7 +68,9 @@ window.onload = async () => {
         localStorage.setItem("MonthlyROI", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.MonthlyROI):0}`);
         localStorage.setItem("TotalROI", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.TotalROI):0}`);
         localStorage.setItem("TotalReturn", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.TotalReturn):0}`);
-        localStorage.setItem("investmentCount", `${response.data.user.investmentCount}`);
+        localStorage.setItem("activeplan", `${response.data.user.activeplan}`);
+
+        console.log(localStorage.getItem("activeplan"));
 
         
       roiCoi.innerHTML += `<div class="row no-gutters align-items-center">
@@ -75,7 +81,7 @@ window.onload = async () => {
               </div>
               <div class="row no-gutters align-items-center">
                   <div class="col-auto">
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">₦${localStorage.getItem('TotalReturn')}
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">${(localStorage.getItem('activeplan'))?currencyFormat(0):currencyFormat(localStorage.getItem('TotalReturn'))}
                       </div>
                   </div>
               </div>
@@ -100,7 +106,7 @@ window.onload = async () => {
               </div>
               <div class="row no-gutters align-items-center">
                   <div class="col-auto">
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">₦${response.data.user.savingBalance}
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">${(localStorage.getItem('activeplan'))?currencyFormat(0):currencyFormat(response.data.user.savingBalance)}
                       </div>
                   </div>
               </div>
@@ -118,7 +124,7 @@ window.onload = async () => {
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                   ROI </div>
-  <div class="h5 mb-0 font-weight-bold text-gray-800">₦${localStorage.getItem('TotalROI')}</div>
+  <div class="h5 mb-0 font-weight-bold text-gray-800">${(localStorage.getItem('activeplan'))?currencyFormat(0):currencyFormat(localStorage.getItem('TotalROI'))}</div>
           </div>
       </a>
       <div class="col-auto">
@@ -133,7 +139,7 @@ window.onload = async () => {
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                   Invested Amount</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">₦${localStorage.getItem('dataPrice')}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">${(localStorage.getItem('activeplan'))?currencyFormat(0):currencyFormat(localStorage.getItem('dataPrice'))}</div>
           </div>
       </a>
       <div class="col-auto">
@@ -148,7 +154,7 @@ window.onload = async () => {
           <div class="col mr-2">
               <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                   Active Loans</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800">${0}</div>
+              <div class="h5 mb-0 font-weight-bold text-gray-800">${(!response.data.user.LoanActive)?currencyFormat(0):currencyFormat(response.data.user.amountToRepayBalance)}</div>
           </div>
       </a>
       <div class="col-auto">

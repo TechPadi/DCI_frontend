@@ -83,7 +83,7 @@ function recieveData(data) {
         emaiil:UserEmail
     }
     const action = `Verified loan of ${actualuser.fullname}`
-    const dataBody ={user,admin,id,action}
+    const dataBody ={user,admin,id,action,date:new Date(),type:"Loan"}
     console.log(dataBody)
     axios.post(`https://dcibackend.herokuapp.com/api/v1/activate/loan/${actualuser._id}`,dataBody)
     .then(res=>{

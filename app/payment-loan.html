@@ -9,10 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCI - Loan</title>
+    <title>Make Payment</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -29,7 +30,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-         <!-- Sidebar -->
+        <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
@@ -60,14 +61,16 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="Account.html" >
+                <a class="nav-link collapsed" href="Account.html">
                     <!-- <i class="fas fa-fw fa-user"></i> -->
                     <i class="ri-user-fill"></i>
                     <span>Account</span>
                 </a>
             </li>
 
-<li class="nav-item">
+            <!-- Nav Item - Utilities Collapse Menu -->
+            
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvest"
                     aria-expanded="true" aria-controls="collapseInvest">
                     <!-- <i class="fas fa-fw fa-list"></i> -->
@@ -87,26 +90,26 @@
 
 
 
-<li class="nav-item">
-                <a class="nav-link collapsed" href="loan.html" >
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="loan.html">
                     <!-- <i class="fas fa-fw fa-user"></i> -->
-                   <i class="ri-refund-2-fill"></i>
+                    <i class="ri-refund-2-fill"></i>
                     <span>Loans</span>
                 </a>
             </li>
 
 
-<li class="nav-item">
-                <a class="nav-link collapsed" href="savings.html" >
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="savings.html">
                     <!-- <i class="fas fa-fw fa-user"></i> -->
-                   <i class="ri-safe-fill"></i>
+                    <i class="ri-safe-fill"></i>
                     <span>Savings</span>
                 </a>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            
-            
+
+
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -116,7 +119,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">forms</h6>
+                        <h6 class="collapse-header">Various forms</h6>
                         <a class="collapse-item" href="renew.html">Renew</a>
                         <a class="collapse-item" href="upgrade.html">Upgrade</a>
                         <a class="collapse-item" href="downgrade.html">Downgrade</a>
@@ -125,29 +128,29 @@
                 </div>
             </li>
 
-            
-             <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
             
 
             <!-- Nav Item - Utilities Collapse Menu -->
-           
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            
+
 
             <!-- Nav Item - Pages Collapse Menu -->
-           
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -157,7 +160,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -176,11 +179,35 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-<!-- Nav Item - Alerts -->
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -232,32 +259,6 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        
-
                         
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -266,7 +267,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userProfile" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -292,105 +294,52 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Service Loan</h1>
-                            <p class="mb-4">DCI loans are open to all bankable adults with secured and verified collateral. Whether its a
-                                buisness, personal, salary adavance loan, our platform is the best for your prompt and less bureaucratic procedure.</p>
-                    
-                    </div>
-                <!-- /.container-fluid -->
-
-                
-
-                        <div class="col-lg-12">
-                            <div class="card shadow mb-4">
-                                    <div class="card-body">
-                                        <div class="row">
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="card-body">
-                                                    <h6 class="h5 text-primary text-primary-800">LOAN PLAN</h6>
-                                                            <div class="no-gutters align-items-center">
-                                                                <div class="col-12">
-                                                                    <div class="row">
-                                                                        <div class="col-8 text-gray-800">
-                                                                            Amount Financed
-                                                                        </div>
-                                                                        <div class="col-4 text-gray-800" id='amount-given'>
-                                                                            pending...
-                                                                        </div>
-                                                                        <div class="col-8 text-gray-800">
-                                                                            Maturity Date
-                                                                        </div>
-                                                                        <div class="col-4 text-gray-800" id='loan-maturity-date'>
-                                                                            DD/MM/YYYY
-                                                                        </div>
-                                                                        <div class="col-8 text-gray-800">
-                                                                            Percentage
-                                                                        </div>
-                                                                        <div class="col-4 text-gray-800" id="loan-percentage">
-                                                                            0%
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                        </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="card-body">
-                                                    <h6 class="h5 text-primary text-primary-800">UPCOMING PAYMENT</h6>
-                                                            <div class="no-gutters align-items-center">
-                                                                <div class="col-12">
-                                                                    <div class="row">
-                                                                        <div class="col-12 text-gray-800">
-                                                                            Amount Due
-                                                                        </div>
-                                                                        <div class="col-12 text-gray-800" id="amount-due">
-                                                                            pending...
-                                                                        </div>
-                                                                        <br><br>
-                                                                        <div class="col-12 text-gray-800" >
-                                                                            Balance
-                                                                        </div>
-                                                                        <div class="col-12 text-gray-800" id="loan-balance">
-                                                                            pending...
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                        </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="card-body">
-                                                    <h6 class="h5 text-primary text-primary-800">DUE DATE</h6>
-                                                            <div class="no-gutters align-items-center">
-                                                                <div class="col-12">
-                                                                    <div class="row">
-                                                                        <div class="col-12 text-gray-800">
-                                                                           Due On
-                                                                        </div>
-                                                                        <div class="col-12 text-gray-800">
-                                                                            DD/MM/YYYY
-                                                                        </div>
-                                                                        <br><br>
-                                                                        <button class="btn btn-primary btn-round pl-3 pr-3" data-toggle="modal" data-target="#upgradeModal">Repay</button>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                        </div>
-                                        </div>
+                    <h1 class="h3 mb-4 text-gray-800">Make Payment</h1>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">PAYMENT METHOD</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                            href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                            aria-selected="true">Pay Online (Paystack)</a>
+                                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                            href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                            aria-selected="false">Mobile Transfer/Bank Deposit</a>
+                                    </div>
                                 </div>
-                                
+                                <div class="col-md-9">
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                            aria-labelledby="v-pills-home-tab">
+                                            <div class="row justify-content-center">
+                                                <h3 class="h3 mb-4 text-center col-12 text-gray-800" id="paidAmount">
+                                                </h3>
+                                                <div class="col-12 d-flex justify-content-center">
+                                                    <button type="button" class="btn btn-primary m-auto"
+                                                        id="paystackBtn">Pay Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                            aria-labelledby="v-pills-profile-tab">
+                                            <form id="transferForm">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
+
+
                         </div>
-
-
-                
-                
-                
-                
-                
-                
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
             </div>
             <!-- End of Main Content -->
 
@@ -422,39 +371,9 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Completing Process Modal -->
-    <div class="modal fade" id="upgradeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title text-center" id="exampleModalLabel">
-                        <div class="h5 mb-0 mr-3 font-weight-bold text-600">Loan Repayment Details</div>
-                    </div>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="card-body">
-                        <form id="repayLoanForm">
-                            <div class="row">
-                              <div class="col-md-12 col-12">
-                                <div class="form-group">
-                                  <label>Amount</label>
-                                  <input type="number" class="form-control" required placeholder="Enter amount to pay loan" id="lAmount">
-                                </div>
-                              </div>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Continue</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-      <!-- Bootstrap core JavaScript-->
+
+    <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -462,14 +381,13 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/admin.js"></script>
+    <script src="js/admin.js"></script> 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <script src="js/dashboard.js"></script>
-    <script src="js/loan-active.js"></script>
+    <script src="js/loan-repay.js"></script>
     <script src="js/logout.js"></script>
-    
+
 
 </body>
 

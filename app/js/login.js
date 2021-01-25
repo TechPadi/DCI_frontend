@@ -59,33 +59,49 @@ function _(str) {
             icon: 'error',
             title: 'Please verify your email.',
             showConfirmButton: false,
-            timer: 5000
-          })
-  
-          location.replace("/app/verify.html");
-        } else if(response.data.user.upToDate) {
+            timer: 3000
+          });
+          setTimeout(() => {
+            location.replace("/app/verify.html");
+          }, 3100);
+          
+        } else if(response.data.user.upToDate && response.data.user.approvedUser === false) {
           Swal.fire({
             position: 'center',
             icon: 'success',
             title: `${response.data.message}`,
             showConfirmButton: false,
-            timer: 5000
+            timer: 3000
           })
-  
-          location.replace("/app/dashboard.html");
+          setTimeout(() => {
+            location.replace("/app/user-verify.html");
+          }, 3100);
+          
+        }else if(response.data.user.upToDate && response.data.user.approvedUser === true) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: `${response.data.message}`,
+            showConfirmButton: false,
+            timer: 3000
+          })
+          setTimeout(() => {
+            location.replace("/app/dashboard.html");
+          }, 3100);
+          
         }else{
           Swal.fire({
             position: 'center',
             icon: 'success',
             title: 'Login Successful. Please update your profile so you can start investing.',
             showConfirmButton: false,
-            timer: 5000
+            timer: 3000
           })
   
           setTimeout(() => {
           
             location.replace("/app/update1.html");
-          }, 5000);
+          }, 3100);
   
         }
   
@@ -99,19 +115,19 @@ function _(str) {
             icon: 'error',
             title: `This email is not registered`,
             showConfirmButton: false,
-            timer: 5000
+            timer: 3000
           })
           setTimeout(() => {
           
             location.replace("/app/register.html");
-          }, 5000);
+          }, 3100);
         } else if(error.message === 'Request failed with status code 403') {
           Swal.fire({
             position: 'center',
             icon: 'error',
             title: `password is incorrect`,
             showConfirmButton: false,
-            timer: 5000
+            timer: 3000
           })
         } else {
           Swal.fire({
@@ -119,7 +135,7 @@ function _(str) {
             icon: 'error',
             title: `It's not you, it's from the server`,
             showConfirmButton: false,
-            timer: 5000
+            timer: 3000
           })
         }
         

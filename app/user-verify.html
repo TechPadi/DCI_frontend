@@ -9,15 +9,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DCI - Termination</title>
+    <title>DCI - User Verification</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"><link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
     <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template-->
     <link href="css/style.css" rel="stylesheet">
@@ -29,11 +31,11 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-         <!-- Sidebar -->
+        <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center disabled" href="#">
                 <div class="sidebar-brand-icon">
                     <i><img src="img/icon%20white.png"> </i>
                 </div>
@@ -44,10 +46,12 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="dashboard.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span> Dashboard</span></a>
+            <li class="nav-item disabled">
+                <a class="nav-link" href="#">
+                    <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+                    <i class="ri-dashboard-3-line"></i>
+                    <span> Dashboard</span>
+                </a>
             </li>
 
             <!-- Divider -->
@@ -60,18 +64,15 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" >
-                    <i class="fas fa-fw fa-user"></i>
+                <a class="nav-link collapsed disabled" href="#">
+                    <!-- <i class="fas fa-fw fa-user"></i> -->
+                    <i class="ri-user-fill"></i>
                     <span>Account</span>
                 </a>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
-            
-            <!-- Nav Item - Utilities Collapse Menu -->
-            
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvest"
+                <a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseInvest"
                     aria-expanded="true" aria-controls="collapseInvest">
                     <!-- <i class="fas fa-fw fa-list"></i> -->
                     <i class="ri-wallet-fill"></i>
@@ -80,74 +81,77 @@
                 <div id="collapseInvest" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Investment Packages</h6>
-                        <a class="collapse-item" href="invest-bmi.html">BMI</a>
-                        <a class="collapse-item" href="invest-ami.html">AMI</a>
-                        <a class="collapse-item" href="invest-bfi.html">BFI</a>
-                        <a class="collapse-item" href="invest-afi.html">AFI</a>
+                        <a class="collapse-item disabled" href="#">BMI</a>
+                        <a class="collapse-item disabled" href="#">AMI</a>
+                        <a class="collapse-item disabled" href="#">BFI</a>
+                        <a class="collapse-item disabled" href="#">AFI</a>
                     </div>
                 </div>
             </li>
 
-
-
             <li class="nav-item">
-                <a class="nav-link collapsed" href="loan.html">
+                <a class="nav-link collapsed disabled" href="#">
                     <!-- <i class="fas fa-fw fa-user"></i> -->
                     <i class="ri-refund-2-fill"></i>
                     <span>Loans</span>
                 </a>
             </li>
 
-
             <li class="nav-item">
-                <a class="nav-link collapsed" href="savings.html">
+                <a class="nav-link collapsed disabled" href="#">
                     <!-- <i class="fas fa-fw fa-user"></i> -->
                     <i class="ri-safe-fill"></i>
                     <span>Savings</span>
                 </a>
             </li>
-            
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+
+
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item active">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+            <li class="nav-item">
+                <a class="nav-link collapsed disabled" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
+                    
                     <i class="ri-file-list-line"></i>
                     <span>Forms</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Various forms</h6>
-                        <a class="collapse-item" href="renew.html">Renew</a>
-                        <a class="collapse-item" href="upgrade.html">Upgrade</a>
-                        <a class="collapse-item" href="downgrade.html">Downgrade</a>
-                        <a class="collapse-item" href="terminate.html">Terminate</a>
+                        <a class="collapse-item disabled" href="#">Renew</a>
+                        <a class="collapse-item disabled" href="#">Upgrade</a>
+                        <a class="collapse-item disabled" href="#">Downgrade</a>
+                        <a class="collapse-item disabled" href="#">Terminate</a>
                     </div>
                 </div>
             </li>
 
-            
-             <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+
+            <!-- Nav Item - Pages Collapse Menu -->
             
 
             <!-- Nav Item - Utilities Collapse Menu -->
-           
-            
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            
+
 
             <!-- Nav Item - Pages Collapse Menu -->
-           
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -157,7 +161,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -176,13 +180,15 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-<!-- Nav Item - Alerts -->
+
+
+                        <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                            <a class="nav-link dropdown-toggle  disabled" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  <i class="fas fa-bell fa-fw"></i> 
                                  
@@ -232,32 +238,6 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        
-
                         
 
                         <div class="topbar-divider d-none d-sm-block"></div>
@@ -266,14 +246,12 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userProfile" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="Account.html">
+                                aria-labelledby="userProfile">
+                                <a class="dropdown-item disabled" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Account
                                 </a>
@@ -294,40 +272,39 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Terminatation Area</h1>
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4" id="userName">
 
-                </div>
-                <!-- /.container-fluid -->
+                    </div>
 
-                
-                
-                
-                
+                    <!-- Content Row -->
+                    <div class="row justify-content-center">
 
-                          <div class="col-lg-12">
+                        <!-- Investment (BMI) Card Example -->
 
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Current investment details</h6>
-                                </div>
+                        <div class="col-xl-12 col-md-12 mb-4">
+                            <div class="card shadow h-100 py-2">
                                 <div class="card-body">
-                                    <p id="renewInvest"></p>
-                                    <br>
-                                    <button class="btn btn-primary btn-icon-split" id="terminateBtn">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-flag"></i>
-                                        </span>
-                                        <span class="text">Terminate Now</span>
-                                    </button>
-                                   
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Your account has not been verified yet. Please wait until it has been verified.
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
-
                         </div>
-                
+
+                    </div>
+
+                    
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        
+
                         <div class="col-lg-12 mb-4">
-
-
                             <!-- Approach -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
@@ -342,9 +319,11 @@
                             </div>
 
                         </div>
-                
-                
-                
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
             </div>
             <!-- End of Main Content -->
 
@@ -376,21 +355,21 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    
 
-     <!-- Bootstrap core JavaScript-->
-     <script src="vendor/jquery/jquery.min.js"></script>
-     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- 
-     <!-- Core plugin JavaScript-->
-     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
- 
-     <!-- Custom scripts for all pages-->
-    <script src="js/admin.js"></script>
-    <script src="js/main.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/admin.js"></script> 
+    <!-- <script src="js/main.js"></script> -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
-    <script src="js/terminate.js"></script>
+    <!-- <script src="js/app.js"></script> -->
     <script src="js/dashboard.js"></script>
     <script src="js/logout.js"></script>
 

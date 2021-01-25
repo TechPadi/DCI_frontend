@@ -1,5 +1,10 @@
 axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
 
+// function for grabbing ids
+function _(str) {
+  return document.querySelector(str);
+}
+
 function currencyFormat(num) {
   return `₦${num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}`
 }
@@ -9,7 +14,7 @@ const loanDue = document.getElementById('amount-due')
 const loanfinanced = document.getElementById('amount-given')
 const loanpercentage = document.getElementById('loan-percentage')
 const loanmature = document.getElementById('loan-maturity-date')
-const userName =document.getElementById('userName')
+// const userName =document.getElementById('userName')
 
 
 
@@ -21,7 +26,11 @@ async function startAppData(params) {
           Authorization: `Bearer ${localStorage.getItem('usertoken')}`
         }
       });
-    userName.innerHTML=response.data.user.fullname
+    // userName.innerHTML=response.data.user.fullname
+    userProfile.innerHTML = `
+      <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
+      <img class="img-profile rounded-circle" src=${localStorage.getItem('userAvatar')}>
+      `;
     if(response.data.user.LoanRequest===true){
     }
     if(response.data.user.LoanActive===true){
@@ -40,3 +49,22 @@ async function startAppData(params) {
 }
 
 startAppData()
+
+const repayLoanForm = _("#repayLoanForm");
+if (repayLoanForm) {
+  repayLoanForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const body = {
+      amount: _("#lAmount").value
+    }
+
+    axios.post(`api/v1/paynowloan/loan/${localStorage.getItem('userid')}`, body)
+    .then(response)
+    .catch(error => {
+      console.log(error.message);
+    })
+
+    location.replace('../app/payment-loan.html');
+  })
+}

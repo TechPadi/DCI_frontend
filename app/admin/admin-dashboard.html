@@ -56,7 +56,12 @@
                     <span>Account</span>
                 </a>
             </li>
-
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="users.html" >
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Users</span>
+                </a>
+            </li>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -72,7 +77,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-credit-card"></i>
@@ -84,7 +89,7 @@
                         <a class="collapse-item" href="admin-payment-loans.html">Completed Payment</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -328,26 +333,28 @@
                             <h6 class="m-0 font-weight-bold text-primary">Recent Transactions</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <div class="table-responsive col-xl-12 col-lg-12"  >
+                                <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Service Type</th>
-                                            <th>Package</th>
+                                            <th>Account Name</th>
+                                            <th>Account Email</th>
+                                            <th>Action</th>
                                             <th>Date</th>
-                                            <th>Amount</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Service Type</th>
-                                            <th>Package</th>
+                                            <th>Account Name</th>
+                                            <th>Account Email</th>
+                                            <th>Action</th>
                                             <th>Date</th>
-                                            <th>Amount</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody>
-                                        <tr>
+                                    <tbody id="adminLogs">
+                                        <!-- <tr>
                                             <td>Loan</td>
                                             <td>Three Months</td>
                                             <td>2020/04/25</td>
@@ -389,7 +396,7 @@
                                             <td>2020/08/06</td>
                                             <td>₦137,500</td>
                                         </tr>
-                                                                            
+                                                                             -->
                                     </tbody>
                                 </table>
                             </div>
@@ -442,7 +449,7 @@
                                 </div>
                                 <div class="card-body">
                                     <p>Our terms and conditions are design to enable us serve you without hitches and give you the best value for your investment plan with us, as such we encourage you to get familiar with them</p>
-                                    <p class="mb-0">You can read our full <a href="../terms.html" target="_blank">terms and conditions by clicking HERE</a></p>
+                                    <p class="mb-0">You can read our full <a href="../../terms.html" target="_blank">terms and conditions by clicking HERE</a></p>
                                 </div>
                             </div>
 

@@ -56,6 +56,12 @@
                     <span>Account</span>
                 </a>
             </li>
+            <li class="nav-item ">
+              <a class="nav-link collapsed" href="users.html" >
+                  <i class="fas fa-fw fa-user"></i>
+                  <span>Users</span>
+              </a>
+          </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -72,7 +78,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                   aria-expanded="true" aria-controls="collapseTwo">
                   <i class="fas fa-fw fa-credit-card"></i>
@@ -84,7 +90,7 @@
                       <a class="collapse-item" href="admin-payment-loans.html">Completed Payment</a>
                   </div>
               </div>
-          </li>
+          </li> -->
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -263,7 +269,7 @@
                 <div class="button-container">
                   <div class="row">
                     <div class="col-lg-8 mr-auto">
-                      <h5>₦ 0<br><small>Referral Bonus Earned</small></h5>
+                      <h5>₦ <span id="RefBonusBalance">0</span><br><small>Referral Bonus Earned</small></h5>
                     </div>
                   </div>
                 </div>
@@ -274,7 +280,7 @@
                 <h4 class="card-title">Last Three Referrals</h4>
               </div>
               <div class="card-body">
-                <ul class="list-unstyled team-members">
+                <ul class="list-unstyled team-members" id="lastRefers">
                   <!-- <li>
                     <div class="row mb-3">
                       <div class="col-md-7 col-7">
@@ -326,7 +332,7 @@
                     </div>
                   </li> -->
                 </ul>
-                <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#referralModal">More</button>
+                <!-- <button class="btn btn-primary btn-round" data-toggle="modal" data-target="#referralModal">More</button> -->
               </div>
             </div>
           </div>

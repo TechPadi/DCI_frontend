@@ -2,14 +2,18 @@ function _(str) {
     return document.querySelector(str);
 }
 
+function currencyFormat(num) {
+    return `₦${num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}`
+}
+
 // Set base url using axios global defaults
 axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
   
 const renewInvest = _("#renewInvest");
 
-renewInvest.innerHTML = `You invested <code>${localStorage.getItem('dataPrice')}</code> 
-<br>For <code>${localStorage.getItem('dataName')}</code> 
-<br>Proceed with package renewal below, make sure to read the terms of downgrade.`;
+renewInvest.innerHTML = `You invested <code>${(localStorage.getItem('activeplan'))?currencyFormat(0):currencyFormat(localStorage.getItem('dataPrice'))}</code> 
+<br>For <code>${(localStorage.getItem('activeplan'))?'No current investment package':localStorage.getItem('dataName')}</code> 
+<br>Proceed with package renewal below, make sure to read the terms of renewal.`;
 
 // const userProfile = _("#userProfile");
 
@@ -21,6 +25,10 @@ userProfile.innerHTML = `
 
 
 const renewBtn = _("#renewBtn");
+
+if (localStorage.getItem('activeplan')) {
+    renewBtn.setAttribute("disabled", true);
+}
 
 if (renewBtn) {
     renewBtn.addEventListener('click', () => {

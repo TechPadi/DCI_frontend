@@ -22,8 +22,8 @@ const checkPassword = () => {
     _(".feedback").innerHTML = `password is a match`;
     _("#firstRegBtn").removeAttribute("disabled");
     // register api call
-  if (regForm) {
-    console.log(regForm)
+    if (regForm) {
+      console.log(regForm)
         regForm.addEventListener('submit', e => {
             e.preventDefault();
     
