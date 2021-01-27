@@ -34,7 +34,7 @@ if (paystackBtn) {
             
         })
         .catch(error => {
-            ;
+            
         })
     });
 }
@@ -115,7 +115,7 @@ if (savingForm) {
             location.replace('/app/dashboard.html');
         })
         .catch(error => {
-            ;
+            
             Swal.fire({
                 position: 'center',
                 icon: 'error',

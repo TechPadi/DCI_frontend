@@ -17,11 +17,9 @@ function getUserDets(params) {
         }
     })
         .then(res=>{
-            console.log(res)
             const {email,occupation,phonenumber,ResidentialAddress,NearestBusStop,State,Nationality,stateOfOrigin,CityTown,_id,accesscode} = res.data.user
-            const image =res.data.user.image.path
-            console.log(image)
-            console.log(email)
+            const image =res.data.user.image.path;
+            
             _('#accimg').src=image
             _('#accemail').value=email
             _('#accoccupation').value=occupation

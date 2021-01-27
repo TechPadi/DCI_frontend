@@ -81,7 +81,7 @@
                 <div id="payment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                          <a class="collapse-item" href="sup-admin-payment-investment.html">Investment</a>
-                        <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a>
+                        <!-- <a class="collapse-item active href="sup-admin-payment-loans.html">Loans</a> -->
                     </div>
                 </div>
             </li>
@@ -98,20 +98,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-credit-card"></i>
-                    <span>Ecomerce</span>
-                </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="admin-payment-investment.html">Manage Products</a>
-                        <a class="collapse-item" href="admin-payment-loans.html">Orders</a>
-                        <a class="collapse-item" href="#">Sales Ranking</a>
-                    </div>
-                </div>
-            </li>
+            
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -165,14 +152,12 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
-                            <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -213,24 +198,21 @@
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
-                        </li>
+                        </li> -->
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="AdminName">loading...</span>
                                 <img class="img-profile rounded-circle"
                                     src="../img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="Account.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Account
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -238,12 +220,9 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
                 <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -523,7 +502,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
+                        <span>Copyright DCI  &copy; <span id="year"></span>. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
                     </div>
                 </div>
             </footer>

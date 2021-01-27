@@ -9,16 +9,18 @@ const renewInvest = _("#renewInvest");
 
 renewInvest.innerHTML = `You invested <code>${localStorage.getItem('dataPrice')}</code> 
 <br>For <code>${localStorage.getItem('dataName')}</code> 
-<br>Proceed with package renewal below, make sure to read the terms of upgrade.`;
+<br>Proceed with package upgrade below, make sure to read the terms of upgrade.`;
 
 // const userProfile = _("#userProfile");
 
 userProfile.innerHTML = `
       <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
       <img class="img-profile rounded-circle" src=${localStorage.getItem('userAvatar')}>
-      `;
+`;
 
-
+if (localStorage.getItem('activeplan')) {
+    _("#upgradeContainer").style.display = "none";
+}
 
 
 const packages = [
@@ -119,7 +121,7 @@ const hideTable = () => {
 const packagesLink = document.querySelectorAll("a.nav-link.collapsed");
 packagesLink.forEach(packageLink => {
     packageLink.addEventListener("click", () => {
-        // console.log(_("#upgradePack"));
+        
         showTable();
 
         _(".btn.btn-primary.btn-icon-split.back").addEventListener("click", hideTable);
@@ -127,65 +129,45 @@ packagesLink.forEach(packageLink => {
         const tables = document.querySelectorAll(".table");
         tables.forEach(table => {
             let tab = table;
-            // console.log(tab);
+            
             let tbody = tab.children[1];
-            // console.log(tbody);
+            
             let tdInvest
             let trs = Array.from(tbody.children);
-            // console.log(trs[0]);
+            
             trs.forEach((tr) => {
                 let tds = Array.from(tr.children);
                 tdInvest = tds.filter(td => td.classList.contains("invest"));
                  
-                // return tdInvest;
-                // console.log(tdInvest[0]);
+                
                 tableTd = tdInvest[0];
-                // console.log(tableTd);
+                
                 if(tableTd.innerHTML > parseInt(localStorage.getItem('dataPrice'))) {
-                // if(tableTd.innerHTML > 300000) {
-                    // tableTd.classList=[]
-                    // console.log(table);
-                    // console.log(tableTd.parentElement);
+                
                     tableTd.style.display = "block";
-
-
-                    // let trTable = tableTd.parentElement;
-                    
-                    // console.log(trTable);
     
                     tableTd.addEventListener("click", getPackages);
     
-                    // 
-                    // 
                 } else {
                     tableTd.parentElement.style.display = "none"
                 }
-                // console.log(trs);
-                // const price = document.querySelector(tab + " tbody tr");
-                // console.log(price);
+                
             })
-            // console.log(tdInvest);
             
         });
-        // console.log(tables)
     });
     
 });
-// console.log(packageLink);
 
 const investUpgrade = _("#investUpgrade");
 
 const getPackages = event => {
-    // tableTd.classList=[]
     let newEl = [];
     let tdParent = event.target.parentElement;
-    console.log();
-        
-        // tdParent.addClass('tr-active');
+
     if(tdParent.classList.contains("tr-active")) {
         tdParent.classList.remove("tr-active");
         newEl = [];
-        console.log(newEl);
     } else {
         tdParent.classList.add("tr-active");
         Array.from(tdParent.children)
@@ -197,17 +179,18 @@ const getPackages = event => {
 
             return newEl
         })
-        console.log(newEl);
     }
 
     const newPackage = packages.filter( package => {
         return package.dataPrice === newEl[2]
-    });
-    console.log(newPackage); 
+    }); 
     
     if (investUpgrade) {
         investUpgrade.addEventListener("submit", e => {
             e.preventDefault();
+
+            _("#investUpgrade button.btn").setAttribute("disabled", true);
+            _("#investUpgrade button.btn").innerHTML = `<img src="/app/img/835.gif" width="20">`
 
             const body = {
                 nextOfKins: _("#nextOfKins").value,
@@ -223,14 +206,11 @@ const getPackages = event => {
                 ACbank: _("#ACbank").value
             }
 
-            console.log(body);
-
             axios.put(`api/v1/plans/${localStorage.getItem('userid')}/pickedplan`, body)
-            .then(response => {
-  
-              console.log(response);
-
-              
+            .then(response => {  
+                
+                _("#investUpgrade button.btn").removeAttribute("disabled");
+                _("#investUpgrade button.btn").innerHTML = `Continue`
   
               Swal.fire({
                 position: 'center',
@@ -243,7 +223,6 @@ const getPackages = event => {
               location.replace('/app/payment.html')
             })
             .catch(error => {
-              console.log(error.message);
               Swal.fire({
                 position: 'center',
                 icon: 'error',

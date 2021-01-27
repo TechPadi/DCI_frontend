@@ -97,11 +97,10 @@ const packages = [
   }
 ]
   
-  console.log(packages);
   
   const investForm = _("#investForm");
   const investPacks = _("#investPacks");
-  // console.log(investPacks);
+  
   const tables = document.querySelectorAll('table');
   if (tables) {
     tables.forEach(table => {
@@ -110,7 +109,7 @@ const packages = [
         let newEl = [];
   
         let tr = event.target.parentElement;
-        console.log(tr);
+        
         tr.classList.toggle("tr-active");
   
         Array.from(tr.children)
@@ -122,15 +121,19 @@ const packages = [
   
             return newEl
           })
-        console.log(newEl);  
+           
         const newPackage = packages.filter( package => {
             return package.dataPrice === newEl[2]
         });
-        console.log(newPackage);
+        
   
         if (investForm) {
           investForm.addEventListener("submit", e => {
             e.preventDefault();
+
+            _("#investForm button.btn").setAttribute("disabled", true);
+            _("#investForm button.btn").innerHTML = `<img src="/app/img/835.gif" width="20">`
+
             const body = {
               nextOfKins: _("#nextOfKins").value,
               relationship: _("#relationship").value,
@@ -145,17 +148,12 @@ const packages = [
               ACname: _("#ACname").value,
               ACbank: _("#ACbank").value
             }
-  
-            console.log(body);
-  
-            
-            
-  
             
             axios.put(`api/v1/plans/${localStorage.getItem('userid')}/pickedplan`, body)
             .then(response => {
   
-              console.log(response);
+              _("#investForm button.btn").removeAttribute("disabled");
+            _("#investForm button.btn").innerHTML = `Continue`
 
               localStorage.setItem("dataPrice", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.dataPrice):0}`);
   
@@ -170,7 +168,6 @@ const packages = [
               location.replace('/app/payment.html')
             })
             .catch(error => {
-              console.log(error.message);
               Swal.fire({
                 position: 'center',
                 icon: 'error',

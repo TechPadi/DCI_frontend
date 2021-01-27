@@ -26,7 +26,6 @@ userProfile.innerHTML = `
       `;
       
 const terminateBtn = _("#terminateBtn");
-console.log(terminateBtn);
 
 if (localStorage.getItem('activeplan')) {
     terminateBtn.setAttribute("disabled", true);
@@ -36,28 +35,19 @@ if (localStorage.getItem('activeplan')) {
 
 if (terminateBtn) {
     terminateBtn.addEventListener('click', () => {
-        console.log("you clicked me");
 
-        // const body = {
-        //     nextOfKins: localStorage.getItem('nextOfKins'),
-        //     relationship: localStorage.getItem('relationship'),
-        //     address: localStorage.getItem('address'),
-        //     phone: localStorage.getItem('phone'),
-        //     dataName: localStorage.getItem('dataName'),
-        //     dataPrice: localStorage.getItem('dataPrice'),
-        //     MonthlyROI: localStorage.getItem('MonthlyROI'),
-        //     TotalROI: localStorage.getItem('TotalReturn'),
-        //     TotalReturn: localStorage.getItem('TotalROI'),
-        //     ACnumber: localStorage.getItem('ACnumber'),
-        //     ACname: localStorage.getItem('ACname'),
-        //     ACbank: localStorage.getItem('ACbank')
-        // }
-
-        // console.log(body);
+        _("#terminateBtn").setAttribute("disabled", true);
+        _("#terminateBtn").innerHTML = `<img src="/app/img/835.gif" width="20">`
 
         axios.put(`api/v1/plansdelete/${localStorage.getItem('userid')}/terminate`)
         .then(response => {
-            console.log(response.data);
+
+            _("#terminateBtn").removeAttribute("disabled");
+            _("#terminateBtn").innerHTML = `<span class="icon text-white-50">
+            <i class="fas fa-flag"></i>
+        </span>
+        <span class="text">Terminate Now</span>`
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -67,7 +57,6 @@ if (terminateBtn) {
             });
         })
         .catch(err => {
-            console.log(err.message);
             Swal.fire({
                 position: 'center',
                 icon: 'error',

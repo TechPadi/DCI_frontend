@@ -1,4 +1,11 @@
-// javascript file for the api calls
+// Preloader
+function preloader() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+}
 
 // function for grabbing ids
 function _(str) {
@@ -18,8 +25,11 @@ const update2 = _("#update2");
 const update3 = _("#update3");
 
 let [sti, roi, invAm, actLon, mReb, userProfile, roiCoi] = [_("#sti"), _("#roi"), _("#invAm"), _("#actLon"), _("#mReb"), _("#userProfile"), _("#roiCoi")];
-// console.log(sti, roi, invAm, actLon, mReb, userProfile, roiCoi);
-// sti.innerHTML = `hello world`;
+
+userProfile.innerHTML = `
+      <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
+      <img class="img-profile rounded-circle" src=${localStorage.getItem('userAvatar')}>
+      `;
   
 const fullName = _("#fullName");
 if(fullName) {
@@ -44,6 +54,7 @@ if(userName) {
 // Dashboard api call
   // console.log(sti, roi)
 window.onload = async () => {
+    
     // console.log('page is fully loaded');
     try{
       const response = await axios({
@@ -53,8 +64,8 @@ window.onload = async () => {
           Authorization: `Bearer ${localStorage.getItem('usertoken')}`
         }
       });
-    //   console.log('page is fully loaded');
-      console.log(response);
+
+      preloader();
 
       localStorage.setItem("dataPrice", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.dataPrice):0}`);
         localStorage.setItem("dataName", `${(response.data.user.planDetails)?response.data.user.planDetails.dataName:"---"}`);
@@ -69,8 +80,6 @@ window.onload = async () => {
         localStorage.setItem("TotalROI", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.TotalROI):0}`);
         localStorage.setItem("TotalReturn", `${(response.data.user.planDetails)?parseInt(response.data.user.planDetails.TotalReturn):0}`);
         localStorage.setItem("activeplan", `${response.data.user.activeplan}`);
-
-        console.log(localStorage.getItem("activeplan"));
 
         
       roiCoi.innerHTML += `<div class="row no-gutters align-items-center">
@@ -92,10 +101,7 @@ window.onload = async () => {
       </div>
   </div>`;
       
-      userProfile.innerHTML = `
-      <span class="mr-2 d-none d-lg-inline text-gray-600 small">${localStorage.getItem('name')}</span>
-      <img class="img-profile rounded-circle" src=${localStorage.getItem('userAvatar')}>
-      `;
+      
   
       sti.innerHTML = `
       <div class="row no-gutters align-items-center">
@@ -184,15 +190,8 @@ window.onload = async () => {
   
       const img = `${(!response.data.user.image)?"img/undraw_profile.svg":response.data.user.image.path}`;
       localStorage.setItem('userAvatar', img);
-
-      console.log(response.data.user.investmentCount > 0);
-  
-      
   
     } catch (error) {
-  
-      
-      
   
       if(error.message === "Request failed with status code 403") {
         Swal.fire({
@@ -208,7 +207,6 @@ window.onload = async () => {
         }, 5000);
       }
   
-      
     }
   
   };

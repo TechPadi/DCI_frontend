@@ -1,3 +1,11 @@
+// Preloader
+$(window).on('load', function() {
+  if ($('#preloader').length) {
+    $('#preloader').delay(100).fadeOut('slow', function() {
+      $(this).remove();
+    });
+  }
+});
 // javascript file for the api calls
 
 // function for grabbing ids
@@ -11,6 +19,7 @@ function _(str) {
   
   // Login form api call
   const loginForm = _("#loginForm");
+  const loginFormBtn = _("#loginBtn");
 //   const progressCircle = Array.from(document.querySelectorAll('.circle'));
 
   
@@ -22,6 +31,9 @@ function _(str) {
   
     loginForm.addEventListener('submit', e => {
       e.preventDefault();
+
+      loginFormBtn.setAttribute("disabled", true);
+      loginFormBtn.innerHTML = `<img src="/app/img/835.gif" width="20">`;
   
       const email = _("#lEmail").value;
       const password = _("#lPassword").value;
@@ -32,8 +44,10 @@ function _(str) {
         password: password
       })
       .then(function (response) {
+
+        loginFormBtn.removeAttribute("disabled");
+        loginFormBtn.innerHTML = `Login`;
   
-        console.log(response.data)
         
         const id = response.data.user._id;
         localStorage.setItem('userid', id);
@@ -104,8 +118,6 @@ function _(str) {
           }, 3100);
   
         }
-  
-        
   
       })
       .catch(function (error) {

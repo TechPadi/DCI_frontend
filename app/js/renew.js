@@ -32,7 +32,9 @@ if (localStorage.getItem('activeplan')) {
 
 if (renewBtn) {
     renewBtn.addEventListener('click', () => {
-        console.log("you clicked me");
+
+        _("#renewBtn").setAttribute("disabled", true);
+        _("#renewBtn").innerHTML = `<img src="/app/img/835.gif" width="20">`
 
         const body = {
             nextOfKins: localStorage.getItem('nextOfKins'),
@@ -49,11 +51,16 @@ if (renewBtn) {
             ACbank: localStorage.getItem('ACbank')
         }
 
-        console.log(body);
 
         axios.put(`api/v1/plans/${localStorage.getItem('userid')}/pickedplan`, body)
         .then(response => {
-            console.log(response.data);
+
+            _("#renewBtn").removeAttribute("disabled");
+            _("#renewBtn").innerHTML = `<span class="icon text-white-50">
+            <i class="fas fa-flag"></i>
+        </span>
+        <span class="text">Renew Now</span>`
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -63,7 +70,6 @@ if (renewBtn) {
             });
         })
         .catch(err => {
-            console.log(err.message);
             Swal.fire({
                 position: 'center',
                 icon: 'error',

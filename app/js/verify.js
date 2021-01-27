@@ -1,3 +1,17 @@
+// Preloader
+function preloader() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(1000).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+  }
+  
+  $(window).on('load', preloader());
+  // function for grabbing ids
+function _(str) {
+  return document.querySelector(str);
+}
 axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
 
 const email =localStorage.getItem('useremail')
@@ -28,13 +42,20 @@ async function sendverifycode () {
 }
 sendverifycode()
 
+const verifyRegBtn = _("#verifyRegBtn");
 
 document.getElementById('verifydForm').addEventListener('submit',
 handleVerifyCode=(e)=>{
     e.preventDefault()
+    
+    verifyRegBtn.setAttribute("disabled", true);
+    verifyRegBtn.innerHTML = `<img src="/app/img/835.gif" width="20">`;
+
     const codeValues =document.getElementById('verInput').value
     axios.post('api/v1/user/verified',{email,accesscode:codeValues})
     .then(res=>{
+        verifyRegBtn.removeAttribute("disabled");
+        verifyRegBtn.innerHTML = `Next`;
         if(res.status===200){
              Swal.fire({
                     position: 'center',
@@ -51,6 +72,5 @@ handleVerifyCode=(e)=>{
         }
     })
     .catch(err=>{
-        console.log(err)
     })
 })

@@ -278,18 +278,6 @@
                                       <input type="text" class="form-control" placeholder="Name of Organisation" id="nOo" required>
                                     </div>
                                   </div>
-                                  <div class="col-md-6 pl-1">
-                                    <div class="form-group">
-                                      <label>Referrals Name</label>
-                                      <input type="text" class="form-control" placeholder="Referrals Name" id="reNm">
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <div class="form-group">
-                                      <label>Referrals Ref No</label>
-                                      <input type="text" class="form-control" placeholder="Referrals Ref No" id="refNo">
-                                    </div>
-                                  </div>
                                   <div class="col-md-6">
                                     <div class="form-group">
                                       <label>Means Of Identification</label>
@@ -309,15 +297,28 @@
                                     </div>
                                   </div>
                                   <div class="col-md-6">
-                                    <div class="form-group">
+                                    <div class="form-group form-group-img">
                                       <label>Upload ID</label>
-                                      <input type="file" class="form-control-file" id="idImg" required>
+                                      <input type="file" class="form-control-file" onchange="uploadImage()" id="idImg" required>
+                                      <span class="d-none pt-5"><img src="/app/img/826.gif" alt="" width="20"> Please Wait...</span>  
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                      <label>Referrals Name</label>
+                                      <input type="text" class="form-control" placeholder="Referrals Name" id="reNm">
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label>Referrals Ref No</label>
+                                      <input type="text" class="form-control" placeholder="Referrals Ref No" id="refNo">
                                     </div>
                                   </div>
                                 </div>
                                 <div class="row">
                                   <div class="update ml-auto mr-auto">
-                                    <button type="submit" class="btn btn-primary btn-round">Next</button>
+                                    <button type="submit" class="btn btn-primary btn-round" id="secondUpdateBtn">Next</button>
                                   </div>
                                 </div>
                             </form>
@@ -359,6 +360,7 @@
 
     </div>
     <!-- End of Page Wrapper -->
+<div id="preloader"></div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">

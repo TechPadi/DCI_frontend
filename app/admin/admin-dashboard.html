@@ -56,7 +56,7 @@
                     <span>Account</span>
                 </a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="users.html" >
                     <i class="fas fa-fw fa-user"></i>
                     <span>Users</span>
@@ -143,14 +143,13 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  <i class="fas fa-bell fa-fw"></i> 
                                  
                                 <span class="badge badge-danger badge-counter"></span> 
                             </a>
-                            <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -191,7 +190,7 @@
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
-                        </li>
+                        </li> -->
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -280,7 +279,7 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Referred Saving (STI)
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Active Saving (STI)
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
@@ -304,7 +303,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Toal Referred Loans</div>
+                                                Total Active Loans</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800" id="debtorsCount">0</div>
                                         </div>
                                         <div class="col-auto">
@@ -418,24 +417,24 @@
                           
 
                             <!-- Color System -->
-                            <!-- <div class="row">
+                            <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-primary text-white shadow">
                                         <div class="card-body">
-                                            ₦ 0
-                                            <div class="text-white-50 small">Monthly Return on Investment</div>
+                                            <span id="refL"></span>
+                                            <div class="text-white-50 small">Total Number Of Refferals</div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-success text-white shadow">
                                         <div class="card-body">
-                                            ₦ 0
+                                            ₦ <span id="refB"></span>
                                             <div class="text-white-50 small">Referal Bonus</div>
                                         </div>
                                     </div>
                                 </div>
-                                </div> -->
+                                </div>
 
                         </div>
 
@@ -516,6 +515,7 @@
 
      <!-- Custom scripts-->
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="./js/index.js"></script>
 

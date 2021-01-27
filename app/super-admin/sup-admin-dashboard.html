@@ -16,9 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="./css/loader.css" rel="stylesheet">
 
 </head>
 
@@ -81,7 +82,7 @@
                 <div id="payment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                          <a class="collapse-item" href="sup-admin-payment-investment.html">Investment</a>
-                        <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a>
+                        <!-- <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a> -->
                     </div>
                 </div>
             </li>
@@ -98,7 +99,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-credit-card"></i>
@@ -111,7 +112,7 @@
                         <a class="collapse-item" href="#">Sales Ranking</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -165,14 +166,13 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  <i class="fas fa-bell fa-fw"></i> 
                                  
                                 <span class="badge badge-danger badge-counter"></span> 
                             </a>
-                            <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -213,7 +213,7 @@
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
-                        </li>
+                        </li> -->
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -221,17 +221,14 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="fullname">loading...</span>
                                 <img class="img-profile rounded-circle"
                                     src="../img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="Account.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Account
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -251,26 +248,41 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Welcome, Miracle </h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Export Report</a>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Export Report</a> -->
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
 
+                        <!-- Return on investment (Total) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Total User</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id='usersCount'>0</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Investment (BMI) Card Example -->
                         
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center"> 
-                                        <a href="#">
                                         <div class="col mr-2"> 
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Invested Amount</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₦1,000,000</div>
+                                                Total Active Investors</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id='investorsCount'> </div>
                                         </div>
-                                        </a>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
                                         </div> 
@@ -279,43 +291,20 @@
                                 
                             </div>
                         </div>
-
-                        <!-- Return on investment (Total) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <a href="#">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Total ROI (Investment + Profit)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">₦1,895,000</div>
-                                        </div>
-                                        </a>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <a href="#">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Saving (STI)
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Active Saving (STI)
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">₦67,000</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="saversCount">₦ 0</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </a>
                                         <div class="col-auto">
                                             <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
                                         </div>
@@ -330,13 +319,11 @@
                             <div class="card border-left-warning shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <a href="#">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Active Loans</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
+                                                Total Active Loans</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="debtorsCount">0</div>
                                         </div>
-                                        </a>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
                                         </div>
@@ -360,74 +347,85 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Recent Transactions</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Add New Admin</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered show" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Service Type</th>
-                                            <th>Package</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Service Type</th>
-                                            <th>Package</th>
-                                            <th>Date</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Loan</td>
-                                            <td>Three Months</td>
-                                            <td>2020/04/25</td>
-                                            <td>₦320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Investment</td>
-                                            <td>BFI</td>
-                                            <td>2020/07/25</td>
-                                            <td>₦170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Savings</td>
-                                            <td>Savings</td>
-                                            <td>2020/01/12</td>
-                                            <td>₦86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Investment</td>
-                                            <td>BMI</td>
-                                            <td>2020/03/29</td>
-                                            <td>₦433,060</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Investment</td>
-                                            <td>AMI</td>
-                                            <td>2020/11/28</td>
-                                            <td>₦162,700</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>2020/12/02</td>
-                                            <td>₦372,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Herrod Chandler</td>
-                                            <td>Sales Assistant</td>
-                                            <td>2020/08/06</td>
-                                            <td>₦137,500</td>
-                                        </tr>
-                                                                            
-                                    </tbody>
-                                </table>
+                            <form id="addNewAdminForm">
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                        <input type="email" id="emailAdmin" class="form-control" placeholder="Email" required>
+                                      </div>
+                                </div>
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                      <input type="text" id="fullnameAdmin" class="form-control" placeholder="fullname" required>
+                                    </div>
+                                    <div class="col">
+                                        <input type="date" id="DOBAdmin" class="form-control" placeholder="date of birth" required>
+                                    </div>
+                                  </div>
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                      <input type="text" id="phonenumberAdmin" class="form-control" placeholder="phonenumber" required>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" id="residentAdmin" class="form-control" placeholder="residentialAddress" required>
+                                    </div>
+                                  </div>
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                      <input type="text" id="nearestBusStopAdmin" class="form-control" placeholder="nearestBusStop" required>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" id="townAdmin" class="form-control" placeholder="city or town" required>
+                                    </div>
+                                  </div>
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                      <input type="text" id="stateAdmin" class="form-control" placeholder="state" required>
+                                    </div>
+                                    <div class="col">
+                                      <input type="text" id="countryAdmin" class="form-control" placeholder="country" required>
+                                    </div>
+                                  </div>    
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <select class="form-control" id="idtypeAdmin" required>
+                                              <option>Id type</option>
+                                              <option value="National id">National id</option>
+                                              <option value="voters card">voters card</option>
+                                              <option value="international passport">international passport</option>
+                                              <option value="drivers licence">drivers licence</option>
+                                            </select>
+                                          </div>
+                                        <!-- <input type="text" id="idtypeAdmin" class="form-control" placeholder="identification type" required> -->
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" id="idnumberAdmin" class="form-control" placeholder="identification number" required>
+                                    </div>
+                                </div>
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <select class="form-control" id="AdminType" required>
+                                              <option>Accoun Type</option>
+                                              <option value="admin">Admin</option>
+                                              <option value="superadmin">Super Admin</option>
+                                            </select>
+                                          </div>
+                                    </div>
+                                    <div class="col">
+                                      <input type="file" accept="image/*" id="myFile" onchange="uploadImage()" class="form-control" placeholder="profile password" required>
+                                    </div>
+                                  </div>   
+                                <div class="row pt-3 pb-3">
+                                    <div class="col">
+                                <input type="password" id="passwordAdmin" class="form-control" placeholder="password" required>
+                                </div>
                             </div>
+                                <button type="submit" class="btn text-center btn-primary">Submit</button>
+                              </form>
                         </div>
                     </div>
 
@@ -448,7 +446,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a> </span>
+                        <span>Copyright DCI  &copy; <span id="year"></span>. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a> </span>
                     </div>
                 </div>
             </footer>
@@ -484,6 +482,7 @@
             </div>
         </div>
     </div>
+    <div id="preloader" class="d-none"></div>
 
      <!-- Bootstrap core JavaScript-->
      <script src="../vendor/jquery/jquery.min.js"></script>
@@ -491,10 +490,12 @@
  
      <!-- Core plugin JavaScript-->
      <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
- 
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <!-- Custom scripts for all pages-->
      <script src="../js/admin.js"></script>
      <script src="../js/main.js"></script>
+     <script src="./js/index.js"></script>
 
 </body>
 

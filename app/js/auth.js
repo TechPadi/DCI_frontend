@@ -1,9 +1,19 @@
+// Preloader
+function preloader() {
+  if ($('#preloader').length) {
+    $('#preloader').delay(1000).fadeOut('slow', function() {
+      $(this).remove();
+    });
+  }
+}
+
+$(window).on('load', preloader());
 // javascript file for the api calls
 
 // function for grabbing ids
 function _(str) {
     return document.querySelector(str);
-  }
+}
   
   
   // Set base url using axios global defaults
@@ -14,28 +24,32 @@ function _(str) {
   const personalForm = _("#personalForm");
   const verifydForm = _("#verifydForm");
   const loginForm = _("#loginForm");
+  const firstFormBtn = _("#firstRegBtn");
+  const secondFormBtn = _("#secondRegBtn");
   // const progressCircle = Array.from(document.querySelectorAll('.circle'));
-
+  
 const checkPassword = () => {
   if (_("#rPwd").value == _("#rCPwd").value) {
     _(".feedback").style.color = "green";
     _(".feedback").innerHTML = `password is a match`;
-    _("#firstRegBtn").removeAttribute("disabled");
+    firstFormBtn.removeAttribute("disabled");
     // register api call
     if (regForm) {
       console.log(regForm)
         regForm.addEventListener('submit', e => {
             e.preventDefault();
-    
+          
+            
+
             const email = _("#rEmail").value;
             const password = _("#rPwd").value;
             const messageofknow = _("#rRefer").value;
   
-  
+            firstFormBtn.setAttribute("disabled", true);
+            firstFormBtn.innerHTML = `<img src="/app/img/835.gif" width="20">`;
     
             localStorage.setItem('useremail', email);
-    
-    
+            
             // axios.all([
     
             //   axios.post(`api/v1/user/register`, {
@@ -54,6 +68,9 @@ const checkPassword = () => {
               messageofknow:messageofknow
             })
             .then( resp1 => {
+              console.log(resp1);
+              firstFormBtn.removeAttribute("disabled");
+              firstFormBtn.innerHTML = `Next`;
     
               Swal.fire({
                 position: 'center',
@@ -83,6 +100,10 @@ const checkPassword = () => {
                   showConfirmButton: false,
                   timer: 5000
                 })
+                setTimeout(() => {
+            
+                  location.replace("/app/register.html")
+                }, 5000);
               }
               else{
                 Swal.fire({
@@ -99,7 +120,7 @@ const checkPassword = () => {
   } else {
     _(".feedback").style.color = "red";
     _(".feedback").innerHTML = `passwords don't match`;
-    _("#firstRegBtn").setAttribute("disabled", true);
+    firstFormBtn.setAttribute("disabled", true);
   }
 } 
 
@@ -109,6 +130,9 @@ if (personalForm) {
 
   personalForm.addEventListener('submit', e => {
       e.preventDefault();
+
+      secondFormBtn.setAttribute("disabled", true);
+      secondFormBtn.innerHTML = `<img src="/app/img/835.gif" width="20">`;
 
       const fullname = _("#fName").value;
       const phonenumber = _("#pNumber").value;
@@ -124,6 +148,9 @@ if (personalForm) {
           gender:gender
         })
         .then ( response => {
+
+          secondFormBtn.removeAttribute("disabled");
+          secondFormBtn.innerHTML = `Next`;
 
           Swal.fire({
             position: 'center',
@@ -160,6 +187,7 @@ if (personalForm) {
   
       verifydForm.addEventListener('submit', e => {
           e.preventDefault();
+
   
           const email = localStorage.getItem('useremail');
           const accesscode = _('#verInput').value;

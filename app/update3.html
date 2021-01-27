@@ -262,9 +262,10 @@
                             <form  id="update3" onsubmit="handleUpdateThree();return false">
                                 <div class="row">
                                   <div class="col-md-12">
-                                    <div class="form-group text-center">
+                                    <div class="form-group form-group-img text-center">
                                       <label>Upload Passport Photograph</label>
-                                      <input type="file" class="form-control-file" id="pass" required>
+                                      <input type="file" class="form-control-file" onchange="uploadImage()" id="idImg" required>
+                                      <span class="d-none pt-5"><img src="/app/img/826.gif" alt="" width="20"> Please Wait...</span>
                                     </div>
                                     <div>
                                         <span>color images only<br>
@@ -275,7 +276,7 @@
                                 </div>
                                 <div class="row">
                                   <div class="update ml-auto mr-auto">
-                                    <button type="submit" class="btn btn-primary btn-round">Finish</button>
+                                    <button type="submit" class="btn btn-primary btn-round" id="thirdUpdateBtn">Finish</button>
                                      <!-- onclick="window.location.href ='invest.html';" -->
                                   </div>
                                 </div>
@@ -317,6 +318,7 @@
 
     </div>
     <!-- End of Page Wrapper -->
+<div id="preloader"></div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">

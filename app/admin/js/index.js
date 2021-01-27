@@ -8,6 +8,9 @@ const  id =localStorage.getItem('id')
 const adminLogs =document.getElementById('adminLogs')
 axios.post(`https://dcibackend.herokuapp.com/api/v1/admin/dashboard/${id}`)
 .then(res=>{
+    console.log(res.data.user.referralsUsers)
+   _("#refB").innerHTML=res.data.user.referralsEarning
+   _("#refL").innerHTML=res.data.user.referralsUsers.length
     const logs = res.data.user.activityLogs
     console.log(logs)
     const place =[]

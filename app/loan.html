@@ -554,9 +554,10 @@
                                         </div>
                                         <div class="row">
                                           <div class="col-md-12">
-                                            <div class="form-group">
+                                            <div class="form-group form-group-img">
                                                     <label for="exampleFormControlFile1">Upload Collateral Documents</label>
                                                     <input type="file" onchange="uploadImage()" id="myFile" required/>
+                                                    <span class="d-none pt-5"><img src="/app/img/826.gif" alt="" width="20"> Please Wait...</span>
                                             </div>
                                           </div>
                                           <div class="col-md-12">
@@ -580,7 +581,7 @@
                                             <div class="col-md-6 pl-1">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Desired Amount</label>
-                                                    <input type="text" class="form-control" id="invAmt" onkeyup='checkInvestorLoanAmount()' required>
+                                                    <input type="text" class="form-control" id="invAmt" onchange='checkInvestorLoanAmount()' required>
                                                 </div>
                                               </div>
                                           <div class="col-md-6 pl-1">
@@ -634,6 +635,7 @@
 
     </div>
     <!-- End of Page Wrapper -->
+<div id="preloader"></div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -654,6 +656,7 @@
  <script src="js/main.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+    <!-- <script src="js/dashboard.js"></script> -->
     <script src="js/app.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/loan.js"></script>

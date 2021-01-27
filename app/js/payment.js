@@ -34,7 +34,7 @@ if (paystackBtn) {
             
         })
         .catch(error => {
-            ;
+            
         })
     });
 }

@@ -1,3 +1,10 @@
+$(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(100).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+});
 // function for grabbing ids
 function _(str) {
     return document.querySelector(str);
@@ -7,10 +14,14 @@ function _(str) {
 axios.defaults.baseURL = `https://dcibackend.herokuapp.com/`;
 
 const resetPwdEmailForm = _("#resetPwdEmailForm");
+let resetPwdEmailFormBtn = _("#resetPwdEmailForm button.btn");
 
 if (resetPwdEmailForm) {
     resetPwdEmailForm.addEventListener('submit', e => {
         e.preventDefault(); 
+
+        resetPwdEmailFormBtn.setAttribute("disabled", true);
+        resetPwdEmailFormBtn.innerHTML = `<img src="/app/img/835.gif" width="20">`
 
         const body = {
             email: _("#lEmail").value,
@@ -21,7 +32,10 @@ if (resetPwdEmailForm) {
 
         axios.post(`api/v1/password/reset-request`,body)
         .then(response => {
-            console.log(response.data);
+
+            resetPwdEmailFormBtn.removeAttribute("disabled");
+            resetPwdEmailFormBtn.innerHTML = `Reset Password`
+
             Swal.fire({
                 position: 'center',
                 icon: 'success',
@@ -31,7 +45,6 @@ if (resetPwdEmailForm) {
             })
         })
         .catch(err => {
-            console.log(err.message)
         });
         
     });

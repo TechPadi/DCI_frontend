@@ -16,9 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="./css/loader.css" rel="stylesheet">
 
 </head>
 
@@ -43,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link collapsed active" href="admin-dashboard.html" >
+                <a class="nav-link collapsed active" href="sup-admin-dashboard.html" >
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -67,7 +68,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                          <a class="collapse-item" href="sup-admin-investment.html">Investment</a>
-                        <a class="collapse-item" href="sup-admin-verification-loan.html">Loans</a>
+                        <a class="collapse-item active" href="sup-admin-verification-loan.html">Loans</a>
                         <a class="collapse-item" href="sup-admin-dashboard-saving.html">Savings</a>
                     </div>
                 </div>
@@ -81,7 +82,7 @@
                 <div id="payment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                          <a class="collapse-item" href="sup-admin-payment-investment.html">Investment</a>
-                        <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a>
+                        <!-- <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a> -->
                     </div>
                 </div>
             </li>
@@ -98,7 +99,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-credit-card"></i>
@@ -111,7 +112,7 @@
                         <a class="collapse-item" href="#">Sales Ranking</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -165,14 +166,12 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
-                            <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -213,24 +212,21 @@
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
-                        </li>
+                        </li> -->
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="AdminName">loading...</span>
                                 <img class="img-profile rounded-circle"
                                     src="../img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="Account.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Account
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -279,16 +275,15 @@
                                                     <tr class="font-weight-bold">
                                                         <th>S/N</th>
                                                         <th>Name</th>
-                                                        <th>Plan</th>
+                                                        <th>Email</th>
                                                         <th class="text-right">Amount</th>
                                                         <th>Reg No</th>
                                                         <th class="text-center">Status</th>
-                                                        <th class="text-center">Action</th>
                                                         <th class="text-center">More</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr class="">
+                                                <tbody id="allLoanrequests">
+                                                    <!-- <tr class="">
                                                         <td>1</td>
                                                         <td>George Obe</td>
                                                         <td>Silver</td>
@@ -308,8 +303,8 @@
                                                                 More <i class="fas fa-fw fa-ellipsis-h"></i>
                                                             </a>
                                                         </td>
-                                                    </tr>
-                                                    <tr class="">
+                                                    </tr> -->
+                                                    <!-- <tr class="">
                                                         <td>2</td>
                                                         <td>Matthew Wike</td>
                                                         <td>Gold</td>
@@ -329,7 +324,7 @@
                                                                 More <i class="fas fa-fw fa-ellipsis-h"></i>
                                                             </a>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
                                         </div>
@@ -348,8 +343,8 @@
                                                         <th class="text-center">Action</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr class="">
+                                                <tbody id="awaitApproval">
+                                                    <!-- <tr class="">
                                                         <td>1</td>
                                                         <td>George Obe</td>
                                                         <td>Silver</td>
@@ -380,7 +375,7 @@
                                                                 <i class="fas fa-fw fa-check"></i>
                                                             </a>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
                                         </div>   
@@ -396,11 +391,10 @@
                                                         <th class="text-right">Amount</th>
                                                         <th>Reg No</th>
                                                         <th class="text-center">Status</th>
-                                                        <th class="text-center">Action</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr class="">
+                                                <tbody id="allLoanActive">
+                                                    <!-- <tr class="">
                                                         <td>1</td>
                                                         <td>George Obe</td>
                                                         <td>Silver</td>
@@ -431,7 +425,7 @@
                                                                 <i class="fas fa-fw fa-check"></i>
                                                             </a>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
                                         </div> 
@@ -447,11 +441,10 @@
                                                         <th class="text-right">Amount</th>
                                                         <th>Reg No</th>
                                                         <th class="text-center">Status</th>
-                                                        <th class="text-center">Action</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr class="">
+                                                <tbody id="allLoanDeclined">
+                                                    <!-- <tr class="">
                                                         <td>1</td>
                                                         <td>George Obe</td>
                                                         <td>Silver</td>
@@ -482,7 +475,7 @@
                                                                 <i class="fas fa-fw fa-check"></i>
                                                             </a>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
                                         </div> 
@@ -523,7 +516,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
+                        <span>Copyright DCI  &copy; <span id="year"></span>. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
                     </div>
                 </div>
             </footer>
@@ -753,7 +746,12 @@
             </div>
         </div>
 
+        <div id="preloader" class="d-none"></div>
+
      <!-- Bootstrap core JavaScript-->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="../vendor/jquery/jquery.min.js"></script>
      <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
@@ -763,6 +761,7 @@
      <!-- Custom scripts for all pages-->
      <script src="../js/admin.js"></script>
      <script src="../js/main.js"></script>
+     <script src="./js/loan.js"></script>
 
 </body>
 

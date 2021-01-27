@@ -16,9 +16,11 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+        <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="./css/loader.css" rel="stylesheet">
 
 </head>
 
@@ -80,8 +82,8 @@
                 </a>
                 <div id="payment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                         <a class="collapse-item" href="sup-admin-payment-investment.html">Investment</a>
-                        <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a>
+                         <a class="collapse-item active" href="sup-admin-payment-investment.html">Investment</a>
+                        <!-- <a class="collapse-item" href="sup-admin-payment-loans.html">Loans</a> -->
                     </div>
                 </div>
             </li>
@@ -98,7 +100,7 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-credit-card"></i>
@@ -111,7 +113,7 @@
                         <a class="collapse-item" href="#">Sales Ranking</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -165,14 +167,12 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
-                            <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
@@ -213,24 +213,21 @@
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
-                        </li>
+                        </li> -->
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Miracle Great</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="AdminName">loading...</span>
                                 <img class="img-profile rounded-circle"
                                     src="../img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="Account.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Account
-                                </a>
+                                
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -257,7 +254,7 @@
                                     <h5 class="card-title text-weight-bold text-800">Investment</h5>
                                   </div>
                                 <div class="card-body p-4">
-                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
                                       <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-home" aria-selected="true">All</a>
                                     </li>
@@ -273,7 +270,7 @@
                                       <li class="nav-item">
                                         <a class="nav-link" id="pills-declined-tab" data-toggle="pill" href="#pills-declined" role="tab" aria-controls="pills-contact" aria-selected="false">Declined</a>
                                       </li>
-                                  </ul>
+                                  </ul> -->
                                   <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-home-tab">
                                         <div class="table-responsive" width="100%">
@@ -282,15 +279,14 @@
                                                     <tr class="font-weight-bold">
                                                         <th>S/N</th>
                                                         <th>Name</th>
-                                                        <th>Plan</th>
-                                                        <th class="text-right">Amount</th>
-                                                        <th>Next Payment</th>
-                                                        <th class="text-center">Status</th>
-                                                        <th class="text-center">Action</th>
+                                                        <th>Monthly ROI</th>
+                                                        <th >ROI Balance</th>
+                                                        <th>Last Payment date</th>
+                                                        <th>Start investment date</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr class="">
+                                                <tbody id="allinvestors">
+                                                    <!-- <tr class="">
                                                         <td>1</td>
                                                         <td>George Obe</td>
                                                         <td>Silver</td>
@@ -323,7 +319,7 @@
                                                                 <i class="fas fa-fw fa-check"></i>
                                                             </a>
                                                         </td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
                                         </div>
@@ -568,7 +564,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright DCI  &copy; 2020. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
+                        <span>Copyright DCI  &copy; <span id="year"></span>. Designed by <a href="http://techpadi.com.ng" target="_blank">Techpadi</a></span>
                     </div>
                 </div>
             </footer>
@@ -786,8 +782,12 @@
                 
             </div>
         </div>
+        <div id="preloader" class="d-none"></div>
 
      <!-- Bootstrap core JavaScript-->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script src="../vendor/jquery/jquery.min.js"></script>
      <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
  
@@ -797,6 +797,7 @@
      <!-- Custom scripts for all pages-->
      <script src="../js/admin.js"></script>
      <script src="../js/main.js"></script>
+     <script src="./js/pay-invest.js"></script>
 
 </body>
 

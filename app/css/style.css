@@ -11311,7 +11311,7 @@ body.sidebar-toggled footer.sticky-footer {
   border-bottom: 2px solid #4e73df;
 }
 
-.loans, .loanss, .buttons, .table  {
+.loans, .loanss, .buttons  {
   display: none;
 }
 .form-control input[type="file" i] {
@@ -11324,3 +11324,48 @@ form.user .verification .form-control-user {
   padding: 1.5rem 1rem;
 }
 
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #ed502e;
+  border-top-color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
